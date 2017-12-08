@@ -25,6 +25,8 @@
 
             </tr>
 
+          
+
             @if ($posts->isEmpty())
 
                 <a href="https://prince.dev/posts/create">Create A Task</a>
@@ -45,7 +47,11 @@
 
         </table>
 
+          <a href="?asc=true"><button type="submit" class="btn btn-primary">Ascending</button></a>
 
+          <a href="?desc=true"><button type="submit" class="btn btn-primary">Descending</button></a>
+
+            
 
 
     </div>

@@ -5,6 +5,9 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 
 use App\Post;
+
+use Auth;
+
 class PostsController extends Controller
 {
 
@@ -18,6 +21,31 @@ class PostsController extends Controller
        //$posts = Post::all();
 
         $posts = Post::all()->where('user_id', auth()->id()); 
+
+
+
+       if(Auth::check()){
+
+
+            if(request('desc')){
+     
+
+                    $temp = Post::orderBy('created_at', 'desc')->where('user_id', auth()->id());
+                
+            }else{
+
+
+                $temp = Post::orderBy('created_at', 'asc')->where('user_id', auth()->id());
+
+
+            }
+
+            $posts = $temp->get();
+
+        }
+
+
+       
 
 
         return view('posts.index', compact('posts'));
