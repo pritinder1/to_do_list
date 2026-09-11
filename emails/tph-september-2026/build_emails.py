@@ -21,7 +21,7 @@ EVENT_CTA = {"19": "Details &amp; RSVP", "24": "Get Tickets", "25": "Get Tickets
 EVENTS_LINK = "https://app.thepeoplesherbalist.com/events"       # all-events page (confirm)
 SHOP_LINK = "https://thepeoplesherbalist.com"
 RADIO_LINK = "https://whcr.org"
-WHATSAPP_LINK = "https://REPLACE-WITH-WHATSAPP-GROUP-LINK"       # The People's Herbal Circle
+WHATSAPP_LINK = "https://chat.whatsapp.com/DzbicvJHjVUG52qbn1bIL2"  # The People's Herbal Circle (decoded from the September flyer QR code)
 FLYER_IMG = ""  # optional: hosted URL of the September calendar flyer. Leave blank to skip.
 
 STYLE = """<style type="text/css">
