@@ -26,9 +26,7 @@ STYLE = """<style type="text/css">
     .container{width:100%;max-width:620px;}
     .brand-logo{width:300px;max-width:90%;height:auto;margin:0 auto;}
     .fluid-image{display:block;width:100%;max-width:620px;height:auto;margin:0 auto;}
-    .button{display:inline-block;box-sizing:border-box;min-width:250px;border-radius:999px;padding:16px 24px;background:#3b4c2d;color:#ffffff!important;font-family:Arial,Helvetica,sans-serif;font-size:12px;line-height:15px;font-weight:900;letter-spacing:.8px;text-transform:uppercase;text-align:center;}
-    .button-gold{background:#e6c781;color:#26321f!important;}
-    .button-cream{background:#f7f3e9;color:#26321f!important;border:2px solid #d9d0bb;}
+
     .date-cell{width:96px;}
     @media only screen and (max-width:640px){
       .container{width:100%!important;max-width:100%!important;}
@@ -38,14 +36,13 @@ STYLE = """<style type="text/css">
       .headline{font-size:33px!important;line-height:38px!important;letter-spacing:-.5px!important;}
       .section-title{font-size:27px!important;line-height:32px!important;}
       .brand-logo{width:240px!important;max-width:90%!important;height:auto!important;margin:0 auto!important;}
-      .button,.button-gold,.button-cream{display:block!important;width:100%!important;max-width:330px!important;margin:0 auto!important;}
+
       .fluid-image{width:100%!important;max-width:100%!important;height:auto!important;margin:0 auto!important;}
       .fact-cell{display:block!important;width:100%!important;max-width:100%!important;box-sizing:border-box!important;padding:6px 0!important;text-align:center!important;}
       .date-cell{width:84px!important;}
       .event-wrap{padding-left:16px!important;padding-right:16px!important;}
     }
   </style>"""
-
 
 def button(href, label, bg="#3b4c2d", color="#ffffff"):
     """Bulletproof table button: fill comes from bgcolor + background-color on the td."""
