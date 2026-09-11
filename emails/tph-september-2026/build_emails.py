@@ -10,6 +10,14 @@ LOGO = "https://raw.githubusercontent.com/pritinder1/to_do_list/claude/email-com
 
 # ---- ONE PLACE TO SET LINKS -------------------------------------------------
 COMEDY_LINK = "https://REPLACE-WITH-COMEDY-EVENT-LINK"          # TruPortals event link (Sept 25)
+# One TruPortals event link per September event. Replace each placeholder once the events exist.
+EVENT_LINKS = {
+    "19": "https://REPLACE-WITH-ALLIANCE-EVENT-LINK",
+    "24": "https://REPLACE-WITH-LSC-EVENT-LINK",
+    "25": COMEDY_LINK,
+    "26": "https://REPLACE-WITH-DIABETES-EVENT-LINK",
+}
+EVENT_CTA = {"19": "Details &amp; RSVP", "24": "Get Tickets", "25": "Get Tickets", "26": "Details &amp; RSVP"}
 EVENTS_LINK = "https://app.thepeoplesherbalist.com/events"       # all-events page (confirm)
 SHOP_LINK = "https://thepeoplesherbalist.com"
 RADIO_LINK = "https://whcr.org"
@@ -219,7 +227,7 @@ EVENTS = [
 def event_row(day, mon, num, color, title, copy, place, time, highlight=False):
     bg = "#fbf6e6" if highlight else "#ffffff"
     border = "#e6c781" if highlight else "#dbe2d4"
-    cta = f'<p style="margin:10px 0 0;"><a href="{COMEDY_LINK}" target="_blank" style="color:#8a5a32;font-size:12px;line-height:18px;font-weight:900;letter-spacing:.6px;text-transform:uppercase;text-decoration:underline;">Get Tickets &rsaquo;</a></p>' if highlight else ""
+    cta = f'<p style="margin:10px 0 0;"><a href="{EVENT_LINKS[num]}" target="_blank" style="color:#8a5a32;font-size:12px;line-height:18px;font-weight:900;letter-spacing:.6px;text-transform:uppercase;text-decoration:underline;">{EVENT_CTA[num]} &rsaquo;</a></p>'
     return f"""
               <tr>
                 <td style="padding:0 0 12px;">
