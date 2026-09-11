@@ -12,13 +12,13 @@ LOGO = "https://thepeoplesherbalist.com/cdn/shop/files/PeoplesHerbalist-WithTagl
 COMEDY_LINK = "https://www.ticketweb.com/event/comedy-conversations-pass-the-williams-center-spring-tickets/14238924"  # TicketWeb, provided by Prince Sep 11
 # One TruPortals event link per September event. Replace each placeholder once the events exist.
 EVENT_LINKS = {
-    "19": "https://REPLACE-WITH-ALLIANCE-EVENT-LINK",
-    "24": "https://REPLACE-WITH-LSC-EVENT-LINK",
+    "19": "",            # Alliance community event: free, no ticket page yet
+    "24": "",            # Liberty Science Center After Dark: add LSC ticket URL when confirmed
     "25": COMEDY_LINK,
-    "26": "https://REPLACE-WITH-DIABETES-EVENT-LINK",
+    "26": "",            # Diabetes Resource Event: free, no ticket page yet
 }
 EVENT_CTA = {"19": "Details &amp; RSVP", "24": "Get Tickets", "25": "Get Tickets", "26": "Details &amp; RSVP"}
-EVENTS_LINK = "https://app.thepeoplesherbalist.com/events"       # all-events page (confirm)
+EVENTS_LINK = ""  # app.thepeoplesherbalist.com/events returns Not found (checked Sep 11); no public listing page exists
 SHOP_LINK = "https://thepeoplesherbalist.com"
 RADIO_LINK = "https://whcr.org"
 WHATSAPP_LINK = "https://chat.whatsapp.com/DzbicvJHjVUG52qbn1bIL2"  # The People's Herbal Circle (decoded from the September flyer QR code)
@@ -227,7 +227,7 @@ EVENTS = [
 def event_row(day, mon, num, color, title, copy, place, time, highlight=False):
     bg = "#fbf6e6" if highlight else "#ffffff"
     border = "#e6c781" if highlight else "#dbe2d4"
-    cta = f'<p style="margin:10px 0 0;"><a href="{EVENT_LINKS[num]}" target="_blank" style="color:#8a5a32;font-size:12px;line-height:18px;font-weight:900;letter-spacing:.6px;text-transform:uppercase;text-decoration:underline;">{EVENT_CTA[num]} &rsaquo;</a></p>'
+    cta = f'<p style="margin:10px 0 0;"><a href="{EVENT_LINKS[num]}" target="_blank" style="color:#8a5a32;font-size:12px;line-height:18px;font-weight:900;letter-spacing:.6px;text-transform:uppercase;text-decoration:underline;">{EVENT_CTA[num]} &rsaquo;</a></p>' if EVENT_LINKS[num] else ""
     return f"""
               <tr>
                 <td style="padding:0 0 12px;">
@@ -279,7 +279,7 @@ def calendar_section():
         </tr>
         <tr>
           <td class="mobile-pad" align="center" style="background:#dde8d5;padding:8px 32px 34px;text-align:center;font-family:Arial,Helvetica,sans-serif;">
-            {button(EVENTS_LINK, "See All Events", "#3b4c2d", "#ffffff")}
+            {button(COMEDY_LINK, "Get Comedy Show Tickets", "#3b4c2d", "#ffffff")}
           </td>
         </tr>
 """
@@ -410,7 +410,7 @@ email2 += f"""
             <p style="margin:0 auto 6px;max-width:470px;color:#2f3d25;font-size:14px;line-height:22px;"><strong>Thu, Sept 24:</strong> Liberty Science Center After Dark, 70s Boogie Nights, 7 to 11 PM, Jersey City.</p>
             <p style="margin:0 auto 6px;max-width:470px;color:#2f3d25;font-size:14px;line-height:22px;"><strong>Fri, Sept 25:</strong> Pass the Mic Comedy &amp; Conversations, 7 to 9 PM, Rutherford.</p>
             <p style="margin:0 auto 18px;max-width:470px;color:#2f3d25;font-size:14px;line-height:22px;"><strong>Sat, Sept 26:</strong> Diabetes Resource Event, 10 AM to 12 PM, Newark.</p>
-            <a href="{EVENTS_LINK}" target="_blank" style="color:#3b4c2d;font-size:12px;line-height:18px;font-weight:900;letter-spacing:.6px;text-transform:uppercase;text-decoration:underline;">See The Full September Calendar &rsaquo;</a>
+            <a href="{WHATSAPP_LINK}" target="_blank" style="color:#3b4c2d;font-size:12px;line-height:18px;font-weight:900;letter-spacing:.6px;text-transform:uppercase;text-decoration:underline;">Get Event Updates On WhatsApp &rsaquo;</a>
           </td>
         </tr>
 """

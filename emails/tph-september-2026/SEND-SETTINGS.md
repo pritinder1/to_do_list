@@ -10,7 +10,7 @@ Timezone: America/New_York
 | Placeholder | Replace with |
 |---|---|
 | `https://www.ticketweb.com/event/comedy-conversations-pass-the-williams-center-spring-tickets/14238924` | TruPortals event link for the Sept 25 comedy show |
-| `https://app.thepeoplesherbalist.com/events` | All-events page (confirm the URL from the events section) |
+| `` | All-events page (confirm the URL from the events section) |
 | `https://chat.whatsapp.com/DzbicvJHjVUG52qbn1bIL2` | The People's Herbal Circle WhatsApp invite link |
 | `FLYER_IMG` (optional) | Hosted URL of the September calendar flyer if you want the image above the list |
 
