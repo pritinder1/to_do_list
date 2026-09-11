@@ -6,7 +6,7 @@ HERE = os.path.dirname(os.path.abspath(__file__))
 OUT = sys.argv[1] if len(sys.argv) > 1 else HERE
 # Hosted logo. Gmail does not render base64 data-URI images, so the logo must be a hosted HTTPS URL.
 # Swap for a TruPortals media-library URL once uploaded (assets.cdn.filesafe.space/K03NyY3QgvKM66LM0Bl7/...).
-LOGO = "https://storage.googleapis.com/content-assistant-images-persistent/0ebfceed-98ea-47c4-b4b9-02afb316765a.png"  # transparent PNG (assets/tph-logo.png) on permanent Google Cloud Storage via SearchAtlas
+LOGO = "https://thepeoplesherbalist.com/cdn/shop/files/PeoplesHerbalist-WithTagline_f7c57d6d-e606-4abc-8e7e-81bef84d8f9a.png?v=1680620763&width=500"  # Shopify CDN logo, provided by Prince Sep 11
 
 # ---- ONE PLACE TO SET LINKS -------------------------------------------------
 COMEDY_LINK = "https://www.ticketweb.com/event/comedy-conversations-pass-the-williams-center-spring-tickets/14238924"  # TicketWeb, provided by Prince Sep 11
