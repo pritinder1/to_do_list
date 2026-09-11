@@ -23,7 +23,7 @@ STYLE = """<style type="text/css">
     img{-ms-interpolation-mode:bicubic;border:0;outline:none;text-decoration:none;display:block;}
     body{margin:0!important;padding:0!important;width:100%!important;background:#e8ecdf;}
     a{text-decoration:none;}
-    .container{width:620px;max-width:620px;}
+    .container{width:100%;max-width:620px;}
     .brand-logo{width:300px;max-width:90%;height:auto;margin:0 auto;}
     .fluid-image{display:block;width:100%;max-width:620px;height:auto;margin:0 auto;}
     .button{display:inline-block;box-sizing:border-box;min-width:250px;border-radius:999px;padding:16px 24px;background:#3b4c2d;color:#ffffff!important;font-family:Arial,Helvetica,sans-serif;font-size:12px;line-height:15px;font-weight:900;letter-spacing:.8px;text-transform:uppercase;text-align:center;}
@@ -46,6 +46,24 @@ STYLE = """<style type="text/css">
     }
   </style>"""
 
+
+def button(href, label, bg="#3b4c2d", color="#ffffff"):
+    """Bulletproof table button: fill comes from bgcolor + background-color on the td."""
+    return (f'<table role="presentation" cellspacing="0" cellpadding="0" border="0" align="center" style="margin:0 auto;">'
+            f'<tr><td align="center" bgcolor="{bg}" style="background-color:{bg};border-radius:999px;mso-padding-alt:16px 34px;">'
+            f'<a href="{href}" target="_blank" style="display:inline-block;min-width:200px;padding:16px 34px;color:{color};font-family:Arial,Helvetica,sans-serif;'
+            f'font-size:12px;line-height:15px;font-weight:900;letter-spacing:.8px;text-transform:uppercase;text-align:center;text-decoration:none;border-radius:999px;">'
+            f'<font color="{color}">{label}</font></a></td></tr></table>')
+
+def bulletproof(html):
+    """Clients like the Gmail iOS app strip the background shorthand and <style>. Add bgcolor attrs and longhand background-color."""
+    import re
+    def fix(m):
+        tag, before, color = m.group(1), m.group(2), m.group(3)
+        return f'<{tag}{before}bgcolor="{color}" style="background-color:{color};'
+    html = re.sub(r'<(td|table)([^>]*?)style="background:(#[0-9a-fA-F]{6});', fix, html)
+    return html
+
 def head(title, preheader):
     return f"""<!DOCTYPE html>
 <html lang="en" xmlns="http://www.w3.org/1999/xhtml" xmlns:v="urn:schemas-microsoft-com:vml" xmlns:o="urn:schemas-microsoft-com:office:office">
@@ -62,7 +80,8 @@ def head(title, preheader):
 <table role="presentation" width="100%" cellspacing="0" cellpadding="0" border="0" bgcolor="#e8ecdf">
   <tr>
     <td class="outer-pad" align="center" style="padding:28px 10px;">
-      <table role="presentation" class="container" width="620" cellspacing="0" cellpadding="0" border="0" align="center" style="width:620px;max-width:620px;background:#ffffff;box-shadow:0 18px 55px rgba(47,61,37,.14);margin:0 auto;">
+      <!--[if mso]><table role="presentation" width="620" cellspacing="0" cellpadding="0" border="0" align="center"><tr><td><![endif]-->
+      <table role="presentation" class="container" width="100%" cellspacing="0" cellpadding="0" border="0" align="center" bgcolor="#ffffff" style="width:100%;max-width:620px;background-color:#ffffff;box-shadow:0 18px 55px rgba(47,61,37,.14);margin:0 auto;">
 """
 
 def brand_hero(kicker, headline, sub):
@@ -81,7 +100,7 @@ def brand_hero(kicker, headline, sub):
               <tr>
                 <td align="center" style="padding:0;">
                   <p style="margin:0 0 10px;color:#596b4b;font-size:10px;line-height:14px;font-weight:900;letter-spacing:2.2px;text-transform:uppercase;">{kicker}</p>
-                  <h1 class="headline" style="margin:0 0 12px;color:#1f2818;font-family:Georgia,'Times New Roman',serif;font-size:40px;line-height:46px;font-weight:700;letter-spacing:-.6px;">{headline}</h1>
+                  <h1 class="headline" style="margin:0 0 12px;color:#1f2818;font-family:Georgia,'Times New Roman',serif;font-size:34px;line-height:40px;font-weight:700;letter-spacing:-.5px;">{headline}</h1>
                   <p style="margin:0 auto;max-width:480px;color:#4d5946;font-size:15px;line-height:24px;">{sub}</p>
                 </td>
               </tr>
@@ -133,7 +152,7 @@ def comedy_spotlight(intro_kicker, intro_title, intro_copy, cta_label, urgency_l
               </tr>
             </table>
 
-            <a class="button button-gold" href="{COMEDY_LINK}" target="_blank" style="display:inline-block;box-sizing:border-box;min-width:250px;border-radius:999px;padding:16px 24px;background:#e6c781;color:#26321f;font-family:Arial,Helvetica,sans-serif;font-size:12px;line-height:15px;font-weight:900;letter-spacing:.8px;text-transform:uppercase;text-align:center;">{cta_label}</a>
+            {button(COMEDY_LINK, cta_label, "#e6c781", "#26321f")}
             {urgency}
           </td>
         </tr>
@@ -255,7 +274,7 @@ def calendar_section():
         </tr>
         <tr>
           <td class="mobile-pad" align="center" style="background:#dde8d5;padding:8px 32px 34px;text-align:center;font-family:Arial,Helvetica,sans-serif;">
-            <a class="button" href="{EVENTS_LINK}" target="_blank" style="display:inline-block;box-sizing:border-box;min-width:250px;border-radius:999px;padding:16px 24px;background:#3b4c2d;color:#ffffff;font-family:Arial,Helvetica,sans-serif;font-size:12px;line-height:15px;font-weight:900;letter-spacing:.8px;text-transform:uppercase;text-align:center;">See All Events</a>
+            {button(EVENTS_LINK, "See All Events", "#3b4c2d", "#ffffff")}
           </td>
         </tr>
 """
@@ -301,7 +320,7 @@ def closing_cta(title, copy, cta_label):
             <p style="margin:0 0 8px;color:#e6c781;font-size:10px;line-height:14px;font-weight:900;letter-spacing:2.2px;text-transform:uppercase;">Friday, September 25</p>
             <h2 class="section-title" style="margin:0 0 10px;color:#ffffff;font-family:Georgia,'Times New Roman',serif;font-size:31px;line-height:36px;font-weight:700;">{title}</h2>
             <p style="margin:0 auto 24px;max-width:460px;color:#d6dfcc;font-size:14px;line-height:22px;">{copy}</p>
-            <a class="button button-gold" href="{COMEDY_LINK}" target="_blank" style="display:inline-block;box-sizing:border-box;min-width:250px;border-radius:999px;padding:16px 24px;background:#e6c781;color:#26321f;font-family:Arial,Helvetica,sans-serif;font-size:12px;line-height:15px;font-weight:900;letter-spacing:.8px;text-transform:uppercase;text-align:center;">{cta_label}</a>
+            {button(COMEDY_LINK, cta_label, "#e6c781", "#26321f")}
             <p style="margin:18px 0 0;color:#aeb99e;font-size:12px;line-height:18px;">Rooted in community. Growing wellness. Naturally.</p>
           </td>
         </tr>
@@ -318,6 +337,7 @@ FOOTER = """
         </tr>
 
       </table>
+      <!--[if mso]></td></tr></table><![endif]-->
     </td>
   </tr>
 </table>
@@ -397,6 +417,8 @@ email2 += closing_cta(
 email2 += FOOTER
 
 os.makedirs(OUT, exist_ok=True)
+email1 = bulletproof(email1)
+email2 = bulletproof(email2)
 open(os.path.join(OUT, "01-comedy-show-september-calendar.html"), "w").write(email1)
 open(os.path.join(OUT, "02-comedy-show-final-call.html"), "w").write(email2)
 open(os.path.join(OUT, "SEND-SETTINGS.md"), "w").write(f"""# TPH September 2026 email queue

@@ -13,7 +13,7 @@
     img{-ms-interpolation-mode:bicubic;border:0;outline:none;text-decoration:none;display:block;}
     body{margin:0!important;padding:0!important;width:100%!important;background:#e8ecdf;}
     a{text-decoration:none;}
-    .container{width:620px;max-width:620px;}
+    .container{width:100%;max-width:620px;}
     .brand-logo{width:300px;max-width:90%;height:auto;margin:0 auto;}
     .fluid-image{display:block;width:100%;max-width:620px;height:auto;margin:0 auto;}
     .button{display:inline-block;box-sizing:border-box;min-width:250px;border-radius:999px;padding:16px 24px;background:#3b4c2d;color:#ffffff!important;font-family:Arial,Helvetica,sans-serif;font-size:12px;line-height:15px;font-weight:900;letter-spacing:.8px;text-transform:uppercase;text-align:center;}
@@ -41,11 +41,12 @@
 <table role="presentation" width="100%" cellspacing="0" cellpadding="0" border="0" bgcolor="#e8ecdf">
   <tr>
     <td class="outer-pad" align="center" style="padding:28px 10px;">
-      <table role="presentation" class="container" width="620" cellspacing="0" cellpadding="0" border="0" align="center" style="width:620px;max-width:620px;background:#ffffff;box-shadow:0 18px 55px rgba(47,61,37,.14);margin:0 auto;">
+      <!--[if mso]><table role="presentation" width="620" cellspacing="0" cellpadding="0" border="0" align="center"><tr><td><![endif]-->
+      <table role="presentation" class="container" width="100%" cellspacing="0" cellpadding="0" border="0" align="center" bgcolor="#ffffff" style="width:100%;max-width:620px;background-color:#ffffff;box-shadow:0 18px 55px rgba(47,61,37,.14);margin:0 auto;">
 
         <!-- BRAND HERO -->
         <tr>
-          <td class="mobile-pad hero-pad" align="center" style="background:#ffffff;padding:30px 28px 36px;text-align:center;font-family:Arial,Helvetica,sans-serif;border-bottom:1px solid #e2e2e2;">
+          <td class="mobile-pad hero-pad" align="center" bgcolor="#ffffff" style="background-color:#ffffff;padding:30px 28px 36px;text-align:center;font-family:Arial,Helvetica,sans-serif;border-bottom:1px solid #e2e2e2;">
             <table role="presentation" width="100%" cellspacing="0" cellpadding="0" border="0" align="center" style="max-width:540px;margin:0 auto;">
               <tr>
                 <td align="center" style="padding:0 0 22px;">
@@ -57,7 +58,7 @@
               <tr>
                 <td align="center" style="padding:0;">
                   <p style="margin:0 0 10px;color:#596b4b;font-size:10px;line-height:14px;font-weight:900;letter-spacing:2.2px;text-transform:uppercase;">You Are Invited</p>
-                  <h1 class="headline" style="margin:0 0 12px;color:#1f2818;font-family:Georgia,'Times New Roman',serif;font-size:40px;line-height:46px;font-weight:700;letter-spacing:-.6px;">Save your Friday night. We planned a good one.</h1>
+                  <h1 class="headline" style="margin:0 0 12px;color:#1f2818;font-family:Georgia,'Times New Roman',serif;font-size:34px;line-height:40px;font-weight:700;letter-spacing:-.5px;">Save your Friday night. We planned a good one.</h1>
                   <p style="margin:0 auto;max-width:480px;color:#4d5946;font-size:15px;line-height:24px;">Hey {{contact.first_name}}, Danny here. On September 25 we are turning the Williams Center into a holistic happy hour and comedy show, and I want you in the room.</p>
                 </td>
               </tr>
@@ -67,7 +68,7 @@
 
         <!-- COMEDY SHOW SPOTLIGHT -->
         <tr>
-          <td class="mobile-pad" align="center" style="background:#1f2818;padding:38px 32px 40px;text-align:center;font-family:Arial,Helvetica,sans-serif;">
+          <td class="mobile-pad" align="center" bgcolor="#1f2818" style="background-color:#1f2818;padding:38px 32px 40px;text-align:center;font-family:Arial,Helvetica,sans-serif;">
             <p style="margin:0 0 8px;color:#e6c781;font-size:10px;line-height:14px;font-weight:900;letter-spacing:2.2px;text-transform:uppercase;">Pass The Mic</p>
             <h2 class="section-title" style="margin:0 0 6px;color:#ffffff;font-family:Georgia,'Times New Roman',serif;font-size:34px;line-height:40px;font-weight:700;">Comedy &amp; Conversations</h2>
             <p style="margin:0 0 22px;color:#e6c781;font-family:Georgia,'Times New Roman',serif;font-size:19px;line-height:26px;font-style:italic;">Friday, September 25 &middot; Williams Center, Rutherford NJ</p>
@@ -76,7 +77,7 @@
             <table role="presentation" width="100%" cellspacing="0" cellpadding="0" border="0" align="center" style="max-width:520px;margin:0 auto 26px;">
               <tr>
                 <td class="fact-cell" width="33%" valign="top" align="center" style="padding:0 6px;">
-                  <table role="presentation" width="100%" cellspacing="0" cellpadding="0" border="0" style="background:#2f3d25;border-radius:16px;">
+                  <table role="presentation" width="100%" cellspacing="0" cellpadding="0" border="0" bgcolor="#2f3d25" style="background-color:#2f3d25;border-radius:16px;">
                     <tr><td align="center" style="padding:16px 10px;">
                       <p style="margin:0 0 4px;color:#e6c781;font-size:10px;line-height:14px;font-weight:900;letter-spacing:1.6px;text-transform:uppercase;">Doors</p>
                       <p style="margin:0;color:#ffffff;font-family:Georgia,'Times New Roman',serif;font-size:20px;line-height:24px;font-weight:700;">7:00 PM</p>
@@ -85,7 +86,7 @@
                   </table>
                 </td>
                 <td class="fact-cell" width="33%" valign="top" align="center" style="padding:0 6px;">
-                  <table role="presentation" width="100%" cellspacing="0" cellpadding="0" border="0" style="background:#2f3d25;border-radius:16px;">
+                  <table role="presentation" width="100%" cellspacing="0" cellpadding="0" border="0" bgcolor="#2f3d25" style="background-color:#2f3d25;border-radius:16px;">
                     <tr><td align="center" style="padding:16px 10px;">
                       <p style="margin:0 0 4px;color:#e6c781;font-size:10px;line-height:14px;font-weight:900;letter-spacing:1.6px;text-transform:uppercase;">Showtime</p>
                       <p style="margin:0;color:#ffffff;font-family:Georgia,'Times New Roman',serif;font-size:20px;line-height:24px;font-weight:700;">8:00 PM</p>
@@ -94,7 +95,7 @@
                   </table>
                 </td>
                 <td class="fact-cell" width="33%" valign="top" align="center" style="padding:0 6px;">
-                  <table role="presentation" width="100%" cellspacing="0" cellpadding="0" border="0" style="background:#2f3d25;border-radius:16px;">
+                  <table role="presentation" width="100%" cellspacing="0" cellpadding="0" border="0" bgcolor="#2f3d25" style="background-color:#2f3d25;border-radius:16px;">
                     <tr><td align="center" style="padding:16px 10px;">
                       <p style="margin:0 0 4px;color:#e6c781;font-size:10px;line-height:14px;font-weight:900;letter-spacing:1.6px;text-transform:uppercase;">Tickets</p>
                       <p style="margin:0;color:#ffffff;font-family:Georgia,'Times New Roman',serif;font-size:20px;line-height:24px;font-weight:700;">$45</p>
@@ -105,25 +106,25 @@
               </tr>
             </table>
 
-            <a class="button button-gold" href="https://REPLACE-WITH-COMEDY-EVENT-LINK" target="_blank" style="display:inline-block;box-sizing:border-box;min-width:250px;border-radius:999px;padding:16px 24px;background:#e6c781;color:#26321f;font-family:Arial,Helvetica,sans-serif;font-size:12px;line-height:15px;font-weight:900;letter-spacing:.8px;text-transform:uppercase;text-align:center;">Get My Tickets</a>
+            <table role="presentation" cellspacing="0" cellpadding="0" border="0" align="center" style="margin:0 auto;"><tr><td align="center" bgcolor="#e6c781" style="background-color:#e6c781;border-radius:999px;mso-padding-alt:16px 34px;"><a href="https://REPLACE-WITH-COMEDY-EVENT-LINK" target="_blank" style="display:inline-block;min-width:200px;padding:16px 34px;color:#26321f;font-family:Arial,Helvetica,sans-serif;font-size:12px;line-height:15px;font-weight:900;letter-spacing:.8px;text-transform:uppercase;text-align:center;text-decoration:none;border-radius:999px;"><font color="#26321f">Get My Tickets</font></a></td></tr></table>
             <p style="margin:14px auto 0;max-width:420px;color:#8a5a32;font-size:12px;line-height:18px;font-weight:900;letter-spacing:.6px;text-transform:uppercase;">Only 100 seats. Once they are gone, they are gone.</p>
           </td>
         </tr>
 
         <!-- WHAT TO EXPECT -->
         <tr>
-          <td class="mobile-pad" align="center" style="background:#ffffff;padding:36px 32px 10px;text-align:center;font-family:Arial,Helvetica,sans-serif;">
+          <td class="mobile-pad" align="center" bgcolor="#ffffff" style="background-color:#ffffff;padding:36px 32px 10px;text-align:center;font-family:Arial,Helvetica,sans-serif;">
             <p style="margin:0 0 7px;color:#596b4b;font-size:10px;line-height:14px;font-weight:900;letter-spacing:2.2px;text-transform:uppercase;">What The Night Looks Like</p>
             <h2 class="section-title" style="margin:0 0 10px;color:#1f2818;font-family:Georgia,'Times New Roman',serif;font-size:31px;line-height:36px;font-weight:700;">Back in the day vs. now.</h2>
             <p style="margin:0 auto 22px;max-width:490px;color:#4d5946;font-size:14px;line-height:22px;">Danny hosts. Headliner Monique Lettice brings the laughs. In between, real conversation about how we grew up, how we live now, and what wellness looks like for our community. Think 70s, 80s and 90s energy, alcohol free.</p>
           </td>
         </tr>
         <tr>
-          <td class="mobile-pad" align="center" style="background:#ffffff;padding:0 32px 36px;text-align:center;font-family:Arial,Helvetica,sans-serif;">
+          <td class="mobile-pad" align="center" bgcolor="#ffffff" style="background-color:#ffffff;padding:0 32px 36px;text-align:center;font-family:Arial,Helvetica,sans-serif;">
             <table role="presentation" width="100%" cellspacing="0" cellpadding="0" border="0" align="center" style="max-width:540px;margin:0 auto;">
               <tr>
                 <td class="fact-cell" width="50%" valign="top" style="padding:0 6px 12px;">
-                  <table role="presentation" width="100%" cellspacing="0" cellpadding="0" border="0" style="background:#f7f3e9;border:1px solid #e5dccb;border-radius:16px;">
+                  <table role="presentation" width="100%" cellspacing="0" cellpadding="0" border="0" bgcolor="#f7f3e9" style="background-color:#f7f3e9;border:1px solid #e5dccb;border-radius:16px;">
                     <tr><td align="left" style="padding:18px 20px;">
                       <p style="margin:0 0 4px;color:#8a5a32;font-size:10px;line-height:14px;font-weight:900;letter-spacing:1.6px;text-transform:uppercase;">Holistic Happy Hour</p>
                       <p style="margin:0;color:#2f3d25;font-size:14px;line-height:21px;">Herbal mocktails made with real botanicals, a DJ set, and time to meet the people behind the brand.</p>
@@ -131,7 +132,7 @@
                   </table>
                 </td>
                 <td class="fact-cell" width="50%" valign="top" style="padding:0 6px 12px;">
-                  <table role="presentation" width="100%" cellspacing="0" cellpadding="0" border="0" style="background:#f7f3e9;border:1px solid #e5dccb;border-radius:16px;">
+                  <table role="presentation" width="100%" cellspacing="0" cellpadding="0" border="0" bgcolor="#f7f3e9" style="background-color:#f7f3e9;border:1px solid #e5dccb;border-radius:16px;">
                     <tr><td align="left" style="padding:18px 20px;">
                       <p style="margin:0 0 4px;color:#8a5a32;font-size:10px;line-height:14px;font-weight:900;letter-spacing:1.6px;text-transform:uppercase;">Live Comedy</p>
                       <p style="margin:0;color:#2f3d25;font-size:14px;line-height:21px;">Stand up, a talk show segment, and audience moments where you might end up part of the bit.</p>
@@ -141,7 +142,7 @@
               </tr>
               <tr>
                 <td class="fact-cell" width="50%" valign="top" style="padding:0 6px 12px;">
-                  <table role="presentation" width="100%" cellspacing="0" cellpadding="0" border="0" style="background:#f7f3e9;border:1px solid #e5dccb;border-radius:16px;">
+                  <table role="presentation" width="100%" cellspacing="0" cellpadding="0" border="0" bgcolor="#f7f3e9" style="background-color:#f7f3e9;border:1px solid #e5dccb;border-radius:16px;">
                     <tr><td align="left" style="padding:18px 20px;">
                       <p style="margin:0 0 4px;color:#8a5a32;font-size:10px;line-height:14px;font-weight:900;letter-spacing:1.6px;text-transform:uppercase;">Food Trucks</p>
                       <p style="margin:0;color:#2f3d25;font-size:14px;line-height:21px;">Come hungry. Wood fired pizza and dessert trucks are lined up outside the venue.</p>
@@ -149,7 +150,7 @@
                   </table>
                 </td>
                 <td class="fact-cell" width="50%" valign="top" style="padding:0 6px 12px;">
-                  <table role="presentation" width="100%" cellspacing="0" cellpadding="0" border="0" style="background:#f7f3e9;border:1px solid #e5dccb;border-radius:16px;">
+                  <table role="presentation" width="100%" cellspacing="0" cellpadding="0" border="0" bgcolor="#f7f3e9" style="background-color:#f7f3e9;border:1px solid #e5dccb;border-radius:16px;">
                     <tr><td align="left" style="padding:18px 20px;">
                       <p style="margin:0 0 4px;color:#8a5a32;font-size:10px;line-height:14px;font-weight:900;letter-spacing:1.6px;text-transform:uppercase;">Bring Your People</p>
                       <p style="margin:0;color:#2f3d25;font-size:14px;line-height:21px;">Seats are limited to 100. Grab tickets for your crew now so you can sit together.</p>
@@ -163,21 +164,21 @@
 
         <!-- SEPTEMBER CALENDAR -->
         <tr>
-          <td class="mobile-pad" align="center" style="background:#dde8d5;padding:34px 32px 18px;text-align:center;font-family:Arial,Helvetica,sans-serif;">
+          <td class="mobile-pad" align="center" bgcolor="#dde8d5" style="background-color:#dde8d5;padding:34px 32px 18px;text-align:center;font-family:Arial,Helvetica,sans-serif;">
             <p style="margin:0 0 7px;color:#596b4b;font-size:10px;line-height:14px;font-weight:900;letter-spacing:2.2px;text-transform:uppercase;">September 2026 Calendar of Events</p>
             <h2 class="section-title" style="margin:0 0 9px;color:#1f2818;font-family:Georgia,'Times New Roman',serif;font-size:31px;line-height:36px;font-weight:700;">Where to find us this month.</h2>
             <p style="margin:0 auto;max-width:470px;color:#4d5946;font-size:14px;line-height:22px;">Connect. Community. Wellness. Nature. Four stops across New Jersey, and we would love to see you at any of them.</p>
           </td>
         </tr>
         <tr>
-          <td class="mobile-pad event-wrap" align="center" style="background:#dde8d5;padding:0 30px 8px;font-family:Arial,Helvetica,sans-serif;">
+          <td class="mobile-pad event-wrap" align="center" bgcolor="#dde8d5" style="background-color:#dde8d5;padding:0 30px 8px;font-family:Arial,Helvetica,sans-serif;">
             <table role="presentation" width="100%" cellspacing="0" cellpadding="0" border="0" align="center" style="max-width:540px;margin:0 auto;">
               <tr>
                 <td style="padding:0 0 12px;">
-                  <table role="presentation" width="100%" cellspacing="0" cellpadding="0" border="0" style="background:#ffffff;border:1px solid #dbe2d4;border-radius:18px;">
+                  <table role="presentation" width="100%" cellspacing="0" cellpadding="0" border="0" bgcolor="#ffffff" style="background-color:#ffffff;border:1px solid #dbe2d4;border-radius:18px;">
                     <tr>
                       <td class="date-cell" width="96" valign="top" align="center" style="padding:16px 8px 16px 16px;">
-                        <table role="presentation" width="100%" cellspacing="0" cellpadding="0" border="0" style="background:#2f6b3a;border-radius:14px;">
+                        <table role="presentation" width="100%" cellspacing="0" cellpadding="0" border="0" bgcolor="#2f6b3a" style="background-color:#2f6b3a;border-radius:14px;">
                           <tr><td align="center" style="padding:12px 4px;">
                             <p style="margin:0;color:#ffffff;font-family:Arial,Helvetica,sans-serif;font-size:10px;line-height:13px;font-weight:900;letter-spacing:1.4px;">SAT</p>
                             <p style="margin:0;color:#ffffff;font-family:Arial,Helvetica,sans-serif;font-size:10px;line-height:13px;font-weight:700;letter-spacing:1.4px;">SEP</p>
@@ -198,10 +199,10 @@
               </tr>
               <tr>
                 <td style="padding:0 0 12px;">
-                  <table role="presentation" width="100%" cellspacing="0" cellpadding="0" border="0" style="background:#ffffff;border:1px solid #dbe2d4;border-radius:18px;">
+                  <table role="presentation" width="100%" cellspacing="0" cellpadding="0" border="0" bgcolor="#ffffff" style="background-color:#ffffff;border:1px solid #dbe2d4;border-radius:18px;">
                     <tr>
                       <td class="date-cell" width="96" valign="top" align="center" style="padding:16px 8px 16px 16px;">
-                        <table role="presentation" width="100%" cellspacing="0" cellpadding="0" border="0" style="background:#1f3f7a;border-radius:14px;">
+                        <table role="presentation" width="100%" cellspacing="0" cellpadding="0" border="0" bgcolor="#1f3f7a" style="background-color:#1f3f7a;border-radius:14px;">
                           <tr><td align="center" style="padding:12px 4px;">
                             <p style="margin:0;color:#ffffff;font-family:Arial,Helvetica,sans-serif;font-size:10px;line-height:13px;font-weight:900;letter-spacing:1.4px;">THU</p>
                             <p style="margin:0;color:#ffffff;font-family:Arial,Helvetica,sans-serif;font-size:10px;line-height:13px;font-weight:700;letter-spacing:1.4px;">SEP</p>
@@ -222,10 +223,10 @@
               </tr>
               <tr>
                 <td style="padding:0 0 12px;">
-                  <table role="presentation" width="100%" cellspacing="0" cellpadding="0" border="0" style="background:#fbf6e6;border:1px solid #e6c781;border-radius:18px;">
+                  <table role="presentation" width="100%" cellspacing="0" cellpadding="0" border="0" bgcolor="#fbf6e6" style="background-color:#fbf6e6;border:1px solid #e6c781;border-radius:18px;">
                     <tr>
                       <td class="date-cell" width="96" valign="top" align="center" style="padding:16px 8px 16px 16px;">
-                        <table role="presentation" width="100%" cellspacing="0" cellpadding="0" border="0" style="background:#b58a1e;border-radius:14px;">
+                        <table role="presentation" width="100%" cellspacing="0" cellpadding="0" border="0" bgcolor="#b58a1e" style="background-color:#b58a1e;border-radius:14px;">
                           <tr><td align="center" style="padding:12px 4px;">
                             <p style="margin:0;color:#ffffff;font-family:Arial,Helvetica,sans-serif;font-size:10px;line-height:13px;font-weight:900;letter-spacing:1.4px;">FRI</p>
                             <p style="margin:0;color:#ffffff;font-family:Arial,Helvetica,sans-serif;font-size:10px;line-height:13px;font-weight:700;letter-spacing:1.4px;">SEP</p>
@@ -246,10 +247,10 @@
               </tr>
               <tr>
                 <td style="padding:0 0 12px;">
-                  <table role="presentation" width="100%" cellspacing="0" cellpadding="0" border="0" style="background:#ffffff;border:1px solid #dbe2d4;border-radius:18px;">
+                  <table role="presentation" width="100%" cellspacing="0" cellpadding="0" border="0" bgcolor="#ffffff" style="background-color:#ffffff;border:1px solid #dbe2d4;border-radius:18px;">
                     <tr>
                       <td class="date-cell" width="96" valign="top" align="center" style="padding:16px 8px 16px 16px;">
-                        <table role="presentation" width="100%" cellspacing="0" cellpadding="0" border="0" style="background:#8a4a22;border-radius:14px;">
+                        <table role="presentation" width="100%" cellspacing="0" cellpadding="0" border="0" bgcolor="#8a4a22" style="background-color:#8a4a22;border-radius:14px;">
                           <tr><td align="center" style="padding:12px 4px;">
                             <p style="margin:0;color:#ffffff;font-family:Arial,Helvetica,sans-serif;font-size:10px;line-height:13px;font-weight:900;letter-spacing:1.4px;">SAT</p>
                             <p style="margin:0;color:#ffffff;font-family:Arial,Helvetica,sans-serif;font-size:10px;line-height:13px;font-weight:700;letter-spacing:1.4px;">SEP</p>
@@ -272,18 +273,18 @@
           </td>
         </tr>
         <tr>
-          <td class="mobile-pad" align="center" style="background:#dde8d5;padding:8px 32px 34px;text-align:center;font-family:Arial,Helvetica,sans-serif;">
-            <a class="button" href="https://app.thepeoplesherbalist.com/events" target="_blank" style="display:inline-block;box-sizing:border-box;min-width:250px;border-radius:999px;padding:16px 24px;background:#3b4c2d;color:#ffffff;font-family:Arial,Helvetica,sans-serif;font-size:12px;line-height:15px;font-weight:900;letter-spacing:.8px;text-transform:uppercase;text-align:center;">See All Events</a>
+          <td class="mobile-pad" align="center" bgcolor="#dde8d5" style="background-color:#dde8d5;padding:8px 32px 34px;text-align:center;font-family:Arial,Helvetica,sans-serif;">
+            <table role="presentation" cellspacing="0" cellpadding="0" border="0" align="center" style="margin:0 auto;"><tr><td align="center" bgcolor="#3b4c2d" style="background-color:#3b4c2d;border-radius:999px;mso-padding-alt:16px 34px;"><a href="https://app.thepeoplesherbalist.com/events" target="_blank" style="display:inline-block;min-width:200px;padding:16px 34px;color:#ffffff;font-family:Arial,Helvetica,sans-serif;font-size:12px;line-height:15px;font-weight:900;letter-spacing:.8px;text-transform:uppercase;text-align:center;text-decoration:none;border-radius:999px;"><font color="#ffffff">See All Events</font></a></td></tr></table>
           </td>
         </tr>
 
         <!-- RADIO + WHATSAPP -->
         <tr>
-          <td class="mobile-pad" align="center" style="background:#ffffff;padding:34px 32px 34px;text-align:center;font-family:Arial,Helvetica,sans-serif;">
+          <td class="mobile-pad" align="center" bgcolor="#ffffff" style="background-color:#ffffff;padding:34px 32px 34px;text-align:center;font-family:Arial,Helvetica,sans-serif;">
             <table role="presentation" width="100%" cellspacing="0" cellpadding="0" border="0" align="center" style="max-width:540px;margin:0 auto;">
               <tr>
                 <td class="fact-cell" width="50%" valign="top" style="padding:0 6px 12px;">
-                  <table role="presentation" width="100%" cellspacing="0" cellpadding="0" border="0" style="background:#f7f3e9;border:1px solid #e5dccb;border-radius:16px;">
+                  <table role="presentation" width="100%" cellspacing="0" cellpadding="0" border="0" bgcolor="#f7f3e9" style="background-color:#f7f3e9;border:1px solid #e5dccb;border-radius:16px;">
                     <tr><td align="center" style="padding:20px 18px;">
                       <p style="margin:0 0 6px;color:#8a5a32;font-size:10px;line-height:14px;font-weight:900;letter-spacing:1.6px;text-transform:uppercase;">Every Wednesday &middot; 7 to 8 AM</p>
                       <p style="margin:0 0 6px;color:#1f2818;font-family:Georgia,'Times New Roman',serif;font-size:19px;line-height:24px;font-weight:700;">The People's Healing Hour</p>
@@ -293,7 +294,7 @@
                   </table>
                 </td>
                 <td class="fact-cell" width="50%" valign="top" style="padding:0 6px 12px;">
-                  <table role="presentation" width="100%" cellspacing="0" cellpadding="0" border="0" style="background:#f7f3e9;border:1px solid #e5dccb;border-radius:16px;">
+                  <table role="presentation" width="100%" cellspacing="0" cellpadding="0" border="0" bgcolor="#f7f3e9" style="background-color:#f7f3e9;border:1px solid #e5dccb;border-radius:16px;">
                     <tr><td align="center" style="padding:20px 18px;">
                       <p style="margin:0 0 6px;color:#8a5a32;font-size:10px;line-height:14px;font-weight:900;letter-spacing:1.6px;text-transform:uppercase;">Stay Connected</p>
                       <p style="margin:0 0 6px;color:#1f2818;font-family:Georgia,'Times New Roman',serif;font-size:19px;line-height:24px;font-weight:700;">The People's Herbal Circle</p>
@@ -309,18 +310,18 @@
 
         <!-- CLOSING CTA -->
         <tr>
-          <td class="mobile-pad" align="center" style="background:#2f3d25;padding:38px 32px 40px;text-align:center;font-family:Arial,Helvetica,sans-serif;">
+          <td class="mobile-pad" align="center" bgcolor="#2f3d25" style="background-color:#2f3d25;padding:38px 32px 40px;text-align:center;font-family:Arial,Helvetica,sans-serif;">
             <p style="margin:0 0 8px;color:#e6c781;font-size:10px;line-height:14px;font-weight:900;letter-spacing:2.2px;text-transform:uppercase;">Friday, September 25</p>
             <h2 class="section-title" style="margin:0 0 10px;color:#ffffff;font-family:Georgia,'Times New Roman',serif;font-size:31px;line-height:36px;font-weight:700;">Come laugh with us.</h2>
             <p style="margin:0 auto 24px;max-width:460px;color:#d6dfcc;font-size:14px;line-height:22px;">Grab your ticket, text a friend, and give yourself a Friday night that is actually worth looking forward to.</p>
-            <a class="button button-gold" href="https://REPLACE-WITH-COMEDY-EVENT-LINK" target="_blank" style="display:inline-block;box-sizing:border-box;min-width:250px;border-radius:999px;padding:16px 24px;background:#e6c781;color:#26321f;font-family:Arial,Helvetica,sans-serif;font-size:12px;line-height:15px;font-weight:900;letter-spacing:.8px;text-transform:uppercase;text-align:center;">Reserve My Seat</a>
+            <table role="presentation" cellspacing="0" cellpadding="0" border="0" align="center" style="margin:0 auto;"><tr><td align="center" bgcolor="#e6c781" style="background-color:#e6c781;border-radius:999px;mso-padding-alt:16px 34px;"><a href="https://REPLACE-WITH-COMEDY-EVENT-LINK" target="_blank" style="display:inline-block;min-width:200px;padding:16px 34px;color:#26321f;font-family:Arial,Helvetica,sans-serif;font-size:12px;line-height:15px;font-weight:900;letter-spacing:.8px;text-transform:uppercase;text-align:center;text-decoration:none;border-radius:999px;"><font color="#26321f">Reserve My Seat</font></a></td></tr></table>
             <p style="margin:18px 0 0;color:#aeb99e;font-size:12px;line-height:18px;">Rooted in community. Growing wellness. Naturally.</p>
           </td>
         </tr>
 
         <!-- FOOTER -->
         <tr>
-          <td class="mobile-pad" align="center" style="background:#1f2818;padding:26px 32px 30px;text-align:center;font-family:Arial,Helvetica,sans-serif;">
+          <td class="mobile-pad" align="center" bgcolor="#1f2818" style="background-color:#1f2818;padding:26px 32px 30px;text-align:center;font-family:Arial,Helvetica,sans-serif;">
             <p style="margin:0 0 7px;color:#d6dfcc;font-size:11px;line-height:17px;font-weight:900;letter-spacing:1px;">The People's Herbalist &middot; New Jersey</p>
             <p style="margin:0 0 9px;color:#aeb99e;font-size:10px;line-height:16px;">Herbal products and educational content are for general wellness purposes and are not intended to diagnose, treat, cure, or prevent disease. Individual responses vary. If you are pregnant, nursing, taking medication, or managing a health condition, speak with a qualified healthcare professional before adding new herbs to your routine.</p>
             <p style="margin:0;font-size:10px;line-height:16px;"><a href="{{unsubscribe_link}}" style="color:#d6dfcc;text-decoration:underline;">Unsubscribe</a></p>
@@ -328,6 +329,7 @@
         </tr>
 
       </table>
+      <!--[if mso]></td></tr></table><![endif]-->
     </td>
   </tr>
 </table>
