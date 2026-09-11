@@ -6,7 +6,7 @@ HERE = os.path.dirname(os.path.abspath(__file__))
 OUT = sys.argv[1] if len(sys.argv) > 1 else HERE
 # Hosted logo. Gmail does not render base64 data-URI images, so the logo must be a hosted HTTPS URL.
 # Swap for a TruPortals media-library URL once uploaded (assets.cdn.filesafe.space/K03NyY3QgvKM66LM0Bl7/...).
-LOGO = "https://raw.githubusercontent.com/pritinder1/to_do_list/claude/email-comedy-show-event-5jwnvb/emails/tph-september-2026/assets/tph-logo.png"  # transparent PNG in assets/; move to TruPortals media for the long term
+LOGO = "https://storage.googleapis.com/content-assistant-images-persistent/0ebfceed-98ea-47c4-b4b9-02afb316765a.png"  # transparent PNG (assets/tph-logo.png) on permanent Google Cloud Storage via SearchAtlas
 
 # ---- ONE PLACE TO SET LINKS -------------------------------------------------
 COMEDY_LINK = "https://REPLACE-WITH-COMEDY-EVENT-LINK"          # TruPortals event link (Sept 25)
