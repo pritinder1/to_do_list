@@ -9,7 +9,7 @@ OUT = sys.argv[1] if len(sys.argv) > 1 else HERE
 LOGO = "https://storage.googleapis.com/content-assistant-images-persistent/0ebfceed-98ea-47c4-b4b9-02afb316765a.png"  # transparent PNG (assets/tph-logo.png) on permanent Google Cloud Storage via SearchAtlas
 
 # ---- ONE PLACE TO SET LINKS -------------------------------------------------
-COMEDY_LINK = "https://REPLACE-WITH-COMEDY-EVENT-LINK"          # TruPortals event link (Sept 25)
+COMEDY_LINK = "https://www.ticketweb.com/event/comedy-conversations-pass-the-williams-center-spring-tickets/14238924"  # TicketWeb, provided by Prince Sep 11
 # One TruPortals event link per September event. Replace each placeholder once the events exist.
 EVENT_LINKS = {
     "19": "https://REPLACE-WITH-ALLIANCE-EVENT-LINK",
