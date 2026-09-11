@@ -6,7 +6,7 @@ HERE = os.path.dirname(os.path.abspath(__file__))
 OUT = sys.argv[1] if len(sys.argv) > 1 else HERE
 # Hosted logo. Gmail does not render base64 data-URI images, so the logo must be a hosted HTTPS URL.
 # Swap for a TruPortals media-library URL once uploaded (assets.cdn.filesafe.space/K03NyY3QgvKM66LM0Bl7/...).
-LOGO = "https://thepeoplesherbalist.com/cdn/shop/files/The_Peoples_Herbalist_Logo_200x.png"
+LOGO = "https://raw.githubusercontent.com/pritinder1/to_do_list/claude/email-comedy-show-event-5jwnvb/emails/tph-september-2026/assets/tph-logo.png"  # transparent PNG in assets/; move to TruPortals media for the long term
 
 # ---- ONE PLACE TO SET LINKS -------------------------------------------------
 COMEDY_LINK = "https://REPLACE-WITH-COMEDY-EVENT-LINK"          # TruPortals event link (Sept 25)
@@ -21,7 +21,7 @@ STYLE = """<style type="text/css">
     table,td{mso-table-lspace:0pt;mso-table-rspace:0pt;}
     table{border-collapse:collapse!important;}
     img{-ms-interpolation-mode:bicubic;border:0;outline:none;text-decoration:none;display:block;}
-    body{margin:0!important;padding:0!important;width:100%!important;background:#efefef;}
+    body{margin:0!important;padding:0!important;width:100%!important;background:#e8ecdf;}
     a{text-decoration:none;}
     .container{width:620px;max-width:620px;}
     .brand-logo{width:300px;max-width:90%;height:auto;margin:0 auto;}
@@ -57,7 +57,7 @@ def head(title, preheader):
   <title>{title}</title>
   {STYLE}
 </head>
-<body style="margin:0;padding:0;background:#efefef;">
+<body style="margin:0;padding:0;background:#e8ecdf;">
 <div style="display:none;font-size:1px;color:#ffffff;line-height:1px;max-height:0px;max-width:0px;opacity:0;overflow:hidden;">{preheader}</div>
 <table role="presentation" width="100%" cellspacing="0" cellpadding="0" border="0" bgcolor="#e8ecdf">
   <tr>
@@ -69,7 +69,7 @@ def brand_hero(kicker, headline, sub):
     return f"""
         <!-- BRAND HERO -->
         <tr>
-          <td class="mobile-pad hero-pad" align="center" style="background:#efefef;padding:28px 28px 36px;text-align:center;font-family:Arial,Helvetica,sans-serif;border-bottom:1px solid #e2e2e2;">
+          <td class="mobile-pad hero-pad" align="center" style="background:#ffffff;padding:30px 28px 36px;text-align:center;font-family:Arial,Helvetica,sans-serif;border-bottom:1px solid #e2e2e2;">
             <table role="presentation" width="100%" cellspacing="0" cellpadding="0" border="0" align="center" style="max-width:540px;margin:0 auto;">
               <tr>
                 <td align="center" style="padding:0 0 22px;">
