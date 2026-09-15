@@ -3,20 +3,20 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-<meta name="description" content="Concept homepage for AGMA, the Alliance for Gray Market and Counterfeit Abatement.">
+<meta name="description" content="Concept homepage for AGMA Global, the Alliance for Gray Market and Counterfeit Abatement.">
 <title>AGMA Global</title>
-<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@75..125,400..800&family=IBM+Plex+Mono:wght@400;500;600&family=Public+Sans:wght@400;500;600;700&display=swap">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@75..125,400..800&family=Open+Sans:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;500;600&family=Public+Sans:wght@400;500;600;700&display=swap">
 <style>
 :root{
-  --ink:#0A0E17; --panel:#131A28; --panel-2:#1A2333;
-  --paper:#ECEEF2; --paper-2:#FFFFFF;
-  --fg:#E7EAF0; --fg-band:#0A0E17;
-  --mute:#8A94A8; --mute-band:#5A6478;
-  --accent:#2FD4C0; --accent-ink:#0B6F62;
+  --ink:#091420; --panel:#142639; --panel-2:#1B3148;
+  --paper:#EDF1F5; --paper-2:#FFFFFF;
+  --fg:#E6ECF2; --fg-band:#12233A;
+  --mute:#8798AC; --mute-band:#4F6478;
+  --accent:#35A2E2; --accent-ink:#0070C0; --brand:#0070C0; --navy:#22394F;
   --suspect:#FF6B4A; --suspect-ink:#B23415;
-  --hair:rgba(231,234,240,.11); --hair-band:rgba(10,14,23,.13);
+  --hair:rgba(230,236,242,.12); --hair-band:rgba(18,35,58,.14);
   --display:"Archivo","Helvetica Neue",Arial,sans-serif;
-  --body:"Public Sans","Helvetica Neue",Arial,sans-serif;
+  --body:"Open Sans","Helvetica Neue",Arial,sans-serif;
   --mono:"IBM Plex Mono",ui-monospace,SFMono-Regular,Menlo,monospace;
   --wrap:1180px;
   --pad:clamp(1.15rem,4vw,2.5rem);
@@ -58,14 +58,14 @@ p{margin:0}
   text-decoration:none; border-radius:2px; border:1px solid transparent; cursor:pointer;
   transition:transform .18s ease, background .18s ease, border-color .18s ease, box-shadow .18s ease, color .18s ease;
 }
-.btn--primary{background:var(--accent); color:#04201C; box-shadow:0 0 0 rgba(47,212,192,0)}
-.btn--primary:hover{transform:translateY(-2px); box-shadow:0 10px 30px -12px rgba(47,212,192,.65)}
+.btn--primary{background:var(--brand); color:#fff; box-shadow:0 0 0 rgba(53,162,226,0)}
+.btn--primary:hover{transform:translateY(-2px); box-shadow:0 10px 30px -12px rgba(0,112,192,.55)}
 .btn--ghost{background:transparent; color:var(--fg); border-color:var(--hair)}
 .btn--ghost:hover{transform:translateY(-2px); border-color:var(--accent); color:var(--accent)}
 .band--paper .btn--ghost{color:var(--fg-band); border-color:rgba(10,14,23,.22)}
 .band--paper .btn--ghost:hover{border-color:var(--accent-ink); color:var(--accent-ink)}
 .btn--dark{background:var(--ink); color:var(--fg)}
-.btn--dark:hover{transform:translateY(-2px); background:#16203180}
+.btn--dark:hover{transform:translateY(-2px); background:#1B314880}
 .cta-row{display:flex; flex-wrap:wrap; gap:.9rem}
 
 /* ---------- header ---------- */
@@ -105,7 +105,7 @@ p{margin:0}
 .hero{position:relative; padding-block:clamp(3.75rem,7vw,6.5rem) clamp(4rem,7vw,7rem); overflow:hidden}
 .hero::before{
   content:""; position:absolute; inset:-30% -10% auto -10%; height:70%;
-  background:radial-gradient(60% 70% at 30% 40%, rgba(47,212,192,.13), transparent 70%);
+  background:radial-gradient(60% 70% at 30% 40%, rgba(53,162,226,.14), transparent 70%);
   pointer-events:none;
 }
 .hero__grid{position:relative; display:grid; grid-template-columns:minmax(0,1.05fr) minmax(0,.95fr); gap:clamp(2.5rem,5vw,4.5rem); align-items:center}
@@ -125,7 +125,7 @@ p{margin:0}
 }
 .term__bar{
   display:flex; align-items:center; gap:.6rem; padding:.8rem 1.1rem;
-  border-bottom:1px solid var(--hair); background:#0E1522;
+  border-bottom:1px solid var(--hair); background:#10202F;
   font-family:var(--mono); font-size:.68rem; letter-spacing:.16em; text-transform:uppercase; color:var(--mute);
 }
 .term__dot{width:7px; height:7px; border-radius:50%; background:var(--accent); flex:0 0 auto}
@@ -133,7 +133,7 @@ p{margin:0}
 .term__body{position:relative; padding:1.5rem 1.35rem 1.35rem}
 .term__scan{
   position:absolute; left:0; right:0; top:0; height:88px; pointer-events:none;
-  background:linear-gradient(180deg, transparent, rgba(47,212,192,.05) 60%, rgba(47,212,192,.26));
+  background:linear-gradient(180deg, transparent, rgba(53,162,226,.05) 60%, rgba(53,162,226,.28));
   animation:scan 3.6s cubic-bezier(.5,0,.5,1) infinite;
 }
 @keyframes scan{0%{transform:translateY(-90px)}100%{transform:translateY(420px)}}
@@ -144,7 +144,7 @@ p{margin:0}
 }
 .chip[data-v="counterfeit"]{color:var(--suspect); border-color:rgba(255,107,74,.4); background:rgba(255,107,74,.1)}
 .chip[data-v="gray"]{color:#F2B544; border-color:rgba(242,181,68,.4); background:rgba(242,181,68,.1)}
-.chip[data-v="authentic"]{color:var(--accent); border-color:rgba(47,212,192,.4); background:rgba(47,212,192,.1)}
+.chip[data-v="authentic"]{color:var(--accent); border-color:rgba(53,162,226,.4); background:rgba(53,162,226,.12)}
 .term__unit{font-family:var(--body); font-size:.94rem; font-weight:600; color:var(--fg)}
 .rows{display:grid; gap:0; font-family:var(--mono); font-size:.76rem; letter-spacing:.02em}
 .row{
@@ -170,7 +170,7 @@ p{margin:0}
 }
 
 /* ---------- member strip ---------- */
-.strip{border-top:1px solid var(--hair); border-bottom:1px solid var(--hair); padding-block:2.75rem; background:#0C1220}
+.strip{border-top:1px solid var(--hair); border-bottom:1px solid var(--hair); padding-block:2.75rem; background:#0C1B29}
 .strip p{font-family:var(--mono); font-size:.68rem; letter-spacing:.22em; text-transform:uppercase; color:var(--mute); text-align:center}
 .strip ul{
   list-style:none; margin:1.9rem 0 0; padding:0; display:flex; flex-wrap:wrap;
@@ -201,7 +201,7 @@ p{margin:0}
   display:flex; flex-direction:column; gap:.9rem;
   transition:transform .2s ease, border-color .2s ease, background .2s ease;
 }
-.domain:hover{transform:translateY(-3px); border-color:rgba(47,212,192,.35); background:var(--panel-2)}
+.domain:hover{transform:translateY(-3px); border-color:rgba(53,162,226,.35); background:var(--panel-2)}
 .domain svg{width:26px; height:26px; color:var(--accent)}
 .domain h3{font-size:1.32rem; font-stretch:102%}
 .domain p{color:var(--mute); font-size:.97rem}
@@ -240,7 +240,7 @@ p{margin:0}
   background:var(--paper-2); border:1px solid var(--hair-band); border-radius:3px;
   transition:transform .2s ease, box-shadow .2s ease, border-color .2s ease;
 }
-.paper:hover{transform:translateY(-3px); box-shadow:0 22px 44px -28px rgba(10,14,23,.5); border-color:rgba(11,111,98,.4)}
+.paper:hover{transform:translateY(-3px); box-shadow:0 22px 44px -28px rgba(10,14,23,.5); border-color:rgba(0,112,192,.4)}
 .paper__tag{font-family:var(--mono); font-size:.65rem; letter-spacing:.16em; text-transform:uppercase; color:var(--accent-ink)}
 .paper h3{font-size:1.16rem; line-height:1.28; color:var(--fg-band); flex:1}
 .paper__meta{font-family:var(--mono); font-size:.7rem; letter-spacing:.1em; color:var(--mute-band); display:flex; justify-content:space-between; gap:1rem; padding-top:1rem; border-top:1px solid var(--hair-band)}
@@ -252,11 +252,11 @@ p{margin:0}
   background:var(--panel); border:1px solid var(--hair); border-radius:3px;
 }
 .tier--lead{
-  background:linear-gradient(180deg,#16233A,#111A2A); border-color:rgba(47,212,192,.4);
-  box-shadow:0 30px 70px -40px rgba(47,212,192,.4); position:relative;
+  background:linear-gradient(180deg,#1C3550,#132437); border-color:rgba(53,162,226,.4);
+  box-shadow:0 30px 70px -40px rgba(53,162,226,.4); position:relative;
 }
 .tier__badge{
-  position:absolute; top:-.72rem; left:2.1rem; background:var(--accent); color:#04201C;
+  position:absolute; top:-.72rem; left:2.1rem; background:var(--brand); color:#fff;
   font-family:var(--mono); font-size:.62rem; font-weight:600; letter-spacing:.18em; text-transform:uppercase;
   padding:.35rem .65rem; border-radius:2px;
 }
@@ -274,7 +274,7 @@ p{margin:0}
 .close .cta-row{justify-content:center; margin-top:1rem}
 
 /* ---------- footer ---------- */
-.ft{background:#070B12; border-top:1px solid var(--hair); padding-block:4rem 2.5rem}
+.ft{background:#081320; border-top:1px solid var(--hair); padding-block:4rem 2.5rem}
 .ft__grid{display:grid; grid-template-columns:minmax(0,1.4fr) repeat(3,minmax(0,1fr)); gap:2.5rem}
 .ft__grid p{color:var(--mute); font-size:.92rem; margin-top:1.1rem; max-width:30ch}
 .ft h4{font-family:var(--mono); font-size:.68rem; font-weight:500; letter-spacing:.18em; text-transform:uppercase; color:var(--mute)}
@@ -287,7 +287,7 @@ p{margin:0}
   border:1px solid var(--hair); border-radius:2px; color:var(--mute);
   transition:color .16s ease, border-color .16s ease;
 }
-.social a:hover{color:var(--accent); border-color:rgba(47,212,192,.45)}
+.social a:hover{color:var(--accent); border-color:rgba(53,162,226,.45)}
 .social svg{width:16px; height:16px}
 .ft__base{
   margin-top:3rem; padding-top:1.75rem; border-top:1px solid var(--hair);
@@ -295,6 +295,14 @@ p{margin:0}
   font-family:var(--mono); font-size:.68rem; letter-spacing:.09em; color:var(--mute); line-height:1.9;
 }
 .ft__base p{max-width:70ch}
+
+/* ---------- member testimonials ---------- */
+.says{display:grid; grid-template-columns:repeat(3,1fr); gap:1.25rem; align-items:stretch}
+.say{display:flex; flex-direction:column; gap:1.35rem; padding:2rem; background:var(--panel); border:1px solid var(--hair); border-radius:3px}
+.say svg{width:26px; height:26px; color:var(--accent); flex:0 0 auto}
+.say blockquote{margin:0; font-size:1rem; line-height:1.62; color:var(--fg); flex:1}
+.say figcaption{padding-top:1.15rem; border-top:1px solid var(--hair); font-size:.86rem; line-height:1.5; color:var(--mute)}
+.say figcaption b{display:block; color:var(--accent); font-weight:600; margin-bottom:.15rem}
 
 /* ---------- membership application form ---------- */
 .apply{display:grid; grid-template-columns:minmax(0,.82fr) minmax(0,1.18fr); gap:clamp(2.5rem,5vw,4.5rem); align-items:start}
@@ -310,12 +318,12 @@ p{margin:0}
 .field > label{font-family:var(--mono); font-size:.66rem; letter-spacing:.14em; text-transform:uppercase; color:var(--mute)}
 .field > label .req{color:var(--accent)}
 .field input,.field select,.field textarea{
-  width:100%; background:#0C1320; border:1px solid var(--hair); border-radius:2px;
+  width:100%; background:#0D1D2C; border:1px solid var(--hair); border-radius:2px;
   padding:.85rem .95rem; color:var(--fg); font-family:var(--body); font-size:.97rem; line-height:1.4;
   transition:border-color .16s ease, box-shadow .16s ease;
 }
 .field textarea{min-height:6.5rem; resize:vertical}
-.field input:focus,.field select:focus,.field textarea:focus{outline:none; border-color:var(--accent); box-shadow:0 0 0 3px rgba(47,212,192,.16)}
+.field input:focus,.field select:focus,.field textarea:focus{outline:none; border-color:var(--accent); box-shadow:0 0 0 3px rgba(53,162,226,.2)}
 .field input[aria-invalid="true"],.field select[aria-invalid="true"]{border-color:var(--suspect)}
 .err{font-size:.82rem; line-height:1.4; color:var(--suspect)}
 .err:empty{display:none}
@@ -354,7 +362,7 @@ p{margin:0}
   .hdr .btn{display:none}
   .burger{display:flex}
   .hero__grid,.feature{grid-template-columns:1fr}
-  .papers,.tiers{grid-template-columns:1fr}
+  .papers,.tiers,.says{grid-template-columns:1fr}
   .apply{grid-template-columns:1fr}
   .credit__link{margin-left:0}
   .stats{grid-template-columns:repeat(2,1fr)}
@@ -388,16 +396,16 @@ p{margin:0}
            Replace the <svg> and <span> below with:
            <img class="mark__logo" src="assets/agma-logo.svg" alt="AGMA"> -->
       <svg class="mark__glyph" viewBox="0 0 24 24" fill="none" aria-hidden="true">
-        <path d="M12 2 3 6v6.2c0 5.2 3.6 8.9 9 9.8 5.4-.9 9-4.6 9-9.8V6l-9-4Z" stroke="#2FD4C0" stroke-width="1.6" stroke-linejoin="round"/>
+        <path d="M12 2 3 6v6.2c0 5.2 3.6 8.9 9 9.8 5.4-.9 9-4.6 9-9.8V6l-9-4Z" stroke="#35A2E2" stroke-width="1.6" stroke-linejoin="round"/>
         <path d="m8.4 12.1 2.5 2.5 4.7-5" stroke="#E7EAF0" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/>
       </svg>
       <span class="mark__txt">AGMA<span>.</span></span>
     </a>
     <nav class="nav" aria-label="Primary">
-      <a href="#threats">Threats</a>
-      <a href="#work">What we do</a>
-      <a href="#border">Enforcement</a>
-      <a href="#research">Research</a>
+      <a href="#threats">4 Pillars</a>
+      <a href="#work">About</a>
+      <a href="#border">One Device</a>
+      <a href="#research">Resources</a>
       <a href="#membership">Membership</a>
     </nav>
     <a class="btn btn--primary" href="#apply">Become a member</a>
@@ -408,10 +416,10 @@ p{margin:0}
     </button>
   </div>
   <div class="mobile" id="mobile-menu" data-open="false">
-    <a href="#threats">Threats</a>
-    <a href="#work">What we do</a>
-    <a href="#border">Enforcement</a>
-    <a href="#research">Research</a>
+    <a href="#threats">4 Pillars</a>
+    <a href="#work">About</a>
+    <a href="#border">One Device</a>
+    <a href="#research">Resources</a>
     <a href="#membership">Membership</a>
     <a class="btn btn--primary" href="#apply">Become a member</a>
   </div>
@@ -425,7 +433,7 @@ p{margin:0}
       <div>
         <p class="eyebrow">Non-profit &middot; Est. 2001 &middot; Washington, D.C.</p>
         <h1>Counterfeit hardware doesn&rsquo;t announce itself.</h1>
-        <p class="lede">Someone has to be looking for it. AGMA is the alliance where the world&rsquo;s technology manufacturers work the problems they cannot solve alone: gray market diversion, counterfeit product, service and warranty fraud, and digital IP theft.</p>
+        <p class="lede">Someone has to be looking for it. AGMA Global is your strategic partner in the fight against gray marketing, counterfeiting, digital IP protection, and service and warranty abuse. A nonprofit, and the largest organisation solely dedicated to IP protection in the high-tech industry.</p>
         <div class="cta-row">
           <a class="btn btn--primary" href="#apply">Become a member</a>
           <a class="btn btn--ghost" href="#research">Read the 2026 priorities</a>
@@ -479,7 +487,7 @@ p{margin:0}
       <p>Members and partners include</p>
       <ul>
         <li>Cisco</li><li>Microsoft</li><li>HP</li><li>HPE</li><li>IBM</li><li>Google</li>
-        <li>Schneider Electric</li><li>Rockwell Automation</li><li>Marvell</li><li>TD SYNNEX</li>
+        <li>Schneider Electric</li><li>Rockwell Automation</li><li>Marvell</li><li>Seagate</li><li>TD SYNNEX</li>
       </ul>
     </div>
   </section>
@@ -493,27 +501,27 @@ p{margin:0}
       </div>
       <div class="stats">
         <div class="stat stat--hot">
-          <b data-count="467" data-prefix="$" data-suffix="B">$467B</b>
-          <span>Global trade in fakes</span>
-          <em>Counterfeit and pirated goods crossing borders in a single year.</em>
+          <b data-count="600" data-prefix="$" data-suffix="B">$600B</b>
+          <span>Cost to the U.S. economy</span>
+          <em>Annual cost of IP theft: counterfeiting, piracy and trade secret theft combined.</em>
         </div>
         <div class="stat stat--hot">
-          <b data-count="2.3" data-suffix="%">2.3%</b>
-          <span>Of all world imports</span>
-          <em>Rising to 4.7% of everything imported into the European Union.</em>
+          <b data-count="1.1" data-prefix="$" data-suffix="T">$1.1T</b>
+          <span>Displaced economic activity</span>
+          <em>From counterfeiting alone in 2022, plus $174 billion in lost sales tax revenue.</em>
+        </div>
+        <div class="stat stat--hot">
+          <b data-count="5.4" data-suffix="M">5.4M</b>
+          <span>Jobs impacted</span>
+          <em>Livelihoods displaced worldwide by trade in counterfeit goods.</em>
         </div>
         <div class="stat">
           <b data-count="900" data-prefix="$" data-suffix="B+">$900B+</b>
           <span>Member revenue represented</span>
           <em>The combined annual revenue of companies sitting at the AGMA table.</em>
         </div>
-        <div class="stat">
-          <b data-count="25" data-suffix=" yrs">25 yrs</b>
-          <span>Of continuous operation</span>
-          <em>Incorporated in 2001 and member-led ever since.</em>
-        </div>
       </div>
-      <p class="term__cap" style="text-align:left;color:var(--mute-band)">Trade figures: OECD &amp; EUIPO, Mapping Global Trade in Fakes 2025</p>
+      <p class="term__cap" style="text-align:left;color:var(--mute-band)">Figures as published by AGMA Global, sourced from Forbes and Corsearch</p>
     </div>
   </section>
 
@@ -521,9 +529,9 @@ p{margin:0}
   <section class="band band--edge" id="threats">
     <div class="wrap">
       <div class="head">
-        <p class="eyebrow">Four domains</p>
-        <h2 class="h2">What the alliance was built to fight.</h2>
-        <p class="lede">Each of these erodes something different: margin, safety, the authorized channel, or the trust a brand spent decades earning. Most members are dealing with all four at once.</p>
+        <p class="eyebrow">The four pillars</p>
+        <h2 class="h2">Four areas. One alliance.</h2>
+        <p class="lede">AGMA focuses on four key areas. Each erodes something different: margin, safety, the authorised channel, or the trust a brand spent decades earning. Most members are dealing with all four at once.</p>
       </div>
       <div class="domains">
 
@@ -533,9 +541,9 @@ p{margin:0}
             <path d="M4 9v10a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V9" stroke-linejoin="round"/>
             <path d="m9 15 6-4" stroke-linecap="round"/>
           </svg>
-          <h3>Gray market diversion</h3>
+          <h3>Gray Marketing</h3>
           <p>Genuine product sold outside the channel it was authorized for. Region locks broken, discounts arbitraged, distributor agreements quietly ignored, and no warranty path when the customer needs one.</p>
-          <dl><dt>Working group</dt><dd>Channel integrity</dd></dl>
+          <dl><dt>Pillar</dt><dd>Preventing unauthorised distribution</dd></dl>
         </article>
 
         <article class="domain">
@@ -543,9 +551,9 @@ p{margin:0}
             <path d="M12 3 4 6.4v5.3c0 4.6 3.2 7.9 8 8.9 4.8-1 8-4.3 8-8.9V6.4L12 3Z" stroke-linejoin="round"/>
             <path d="M12 8.6v3.6M12 15.4h.01" stroke-linecap="round"/>
           </svg>
-          <h3>Counterfeit product</h3>
+          <h3>Counterfeiting</h3>
           <p>Fake components and whole units built to pass a glance and fail under load. In networking, medical and industrial equipment, a counterfeit part is not a pricing problem. It is a safety incident waiting for a date.</p>
-          <dl><dt>Working group</dt><dd>Product authentication</dd></dl>
+          <dl><dt>Pillar</dt><dd>Stopping fake goods</dd></dl>
         </article>
 
         <article class="domain">
@@ -554,9 +562,9 @@ p{margin:0}
             <path d="M8.5 7.5V6a3.5 3.5 0 0 1 7 0v1.5" stroke-linecap="round"/>
             <path d="M12 12v3" stroke-linecap="round"/>
           </svg>
-          <h3>Service and warranty fraud</h3>
+          <h3>Service &amp; Warranty Abuse</h3>
           <p>Support contracts claimed on units that were never entitled to them. Coverage resold, entitlements cloned, replacement parts harvested. The cost lands in service operations long before anyone calls it fraud.</p>
-          <dl><dt>Working group</dt><dd>Entitlement abuse</dd></dl>
+          <dl><dt>Pillar</dt><dd>Addressing fraudulent claims</dd></dl>
         </article>
 
         <article class="domain">
@@ -565,9 +573,9 @@ p{margin:0}
             <path d="M14 4v5h5" stroke-linejoin="round"/>
             <path d="M9 14.5 7 16.5l2 2M14 14.5l2 2-2 2" stroke-linecap="round" stroke-linejoin="round"/>
           </svg>
-          <h3>Digital IP theft</h3>
+          <h3>Digital IP Protection</h3>
           <p>Firmware, licence keys and software images lifted, re-signed and redistributed. As product value moves from the box to the code inside it, protecting digital IP has become the whole ballgame.</p>
-          <dl><dt>Working group</dt><dd>Digital IP protection</dd></dl>
+          <dl><dt>Pillar</dt><dd>Safeguarding IP in the digital space</dd></dl>
         </article>
 
       </div>
@@ -660,6 +668,37 @@ p{margin:0}
           <h3>Brand Protection Insights from Industry Leaders in Gray Market, Counterfeit and IP Fraud Mitigation</h3>
           <div class="paper__meta"><span>2020</span><span>Read &rarr;</span></div>
         </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- MEMBER TESTIMONIALS -->
+  <section class="band band--edge">
+    <div class="wrap">
+      <div class="head">
+        <p class="eyebrow">What our members say</p>
+        <h2 class="h2">The value is the room, not the paperwork.</h2>
+      </div>
+      <div class="says">
+
+        <figure class="say">
+          <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M9.6 5.4c-3 1.5-5 4.4-5 8.1 0 3.1 1.8 5.1 4.2 5.1 2.1 0 3.7-1.6 3.7-3.6 0-2-1.4-3.5-3.3-3.5-.4 0-.9.1-1 .1.3-1.6 1.8-3.5 3.3-4.4l-1.9-1.8Zm9.3 0c-3 1.5-5 4.4-5 8.1 0 3.1 1.8 5.1 4.2 5.1 2.1 0 3.7-1.6 3.7-3.6 0-2-1.4-3.5-3.3-3.5-.4 0-.9.1-1 .1.3-1.6 1.8-3.5 3.3-4.4l-1.9-1.8Z"/></svg>
+          <blockquote>AGMA has been invaluable in helping us tackle gray market challenges. The collaboration and shared insights from fellow members have strengthened our ability to protect our channels and maintain customer trust globally.</blockquote>
+          <figcaption><b>Kasia Maciola</b>Head of Channel Compliance Programs, Schneider Electric</figcaption>
+        </figure>
+
+        <figure class="say">
+          <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M9.6 5.4c-3 1.5-5 4.4-5 8.1 0 3.1 1.8 5.1 4.2 5.1 2.1 0 3.7-1.6 3.7-3.6 0-2-1.4-3.5-3.3-3.5-.4 0-.9.1-1 .1.3-1.6 1.8-3.5 3.3-4.4l-1.9-1.8Zm9.3 0c-3 1.5-5 4.4-5 8.1 0 3.1 1.8 5.1 4.2 5.1 2.1 0 3.7-1.6 3.7-3.6 0-2-1.4-3.5-3.3-3.5-.4 0-.9.1-1 .1.3-1.6 1.8-3.5 3.3-4.4l-1.9-1.8Z"/></svg>
+          <blockquote>The opportunity AGMA presents to engage with industry peers, subject matter experts, and learn best practices is unique and highly valuable to me. The relationships you can build with other AGMA members and learn from one another are key reasons why other companies should consider joining.</blockquote>
+          <figcaption><b>AGMA Member</b>Attributed as published</figcaption>
+        </figure>
+
+        <figure class="say">
+          <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M9.6 5.4c-3 1.5-5 4.4-5 8.1 0 3.1 1.8 5.1 4.2 5.1 2.1 0 3.7-1.6 3.7-3.6 0-2-1.4-3.5-3.3-3.5-.4 0-.9.1-1 .1.3-1.6 1.8-3.5 3.3-4.4l-1.9-1.8Zm9.3 0c-3 1.5-5 4.4-5 8.1 0 3.1 1.8 5.1 4.2 5.1 2.1 0 3.7-1.6 3.7-3.6 0-2-1.4-3.5-3.3-3.5-.4 0-.9.1-1 .1.3-1.6 1.8-3.5 3.3-4.4l-1.9-1.8Z"/></svg>
+          <blockquote>It&rsquo;s been a pleasure being a member of AGMA during such a groundbreaking time in global brand protection. We&rsquo;re looking forward to continuing to learn from and collaborate with leaders across the industry.</blockquote>
+          <figcaption><b>Emmanuel Frost</b>CEO, Brand Alignment</figcaption>
+        </figure>
+
       </div>
     </div>
   </section>
@@ -846,49 +885,58 @@ p{margin:0}
            Replace the <svg> and <span> below with:
            <img class="mark__logo" src="assets/agma-logo.svg" alt="AGMA"> -->
       <svg class="mark__glyph" viewBox="0 0 24 24" fill="none" aria-hidden="true">
-            <path d="M12 2 3 6v6.2c0 5.2 3.6 8.9 9 9.8 5.4-.9 9-4.6 9-9.8V6l-9-4Z" stroke="#2FD4C0" stroke-width="1.6" stroke-linejoin="round"/>
+            <path d="M12 2 3 6v6.2c0 5.2 3.6 8.9 9 9.8 5.4-.9 9-4.6 9-9.8V6l-9-4Z" stroke="#35A2E2" stroke-width="1.6" stroke-linejoin="round"/>
             <path d="m8.4 12.1 2.5 2.5 4.7-5" stroke="#E7EAF0" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/>
           </svg>
           <span class="mark__txt">AGMA<span>.</span></span>
         </a>
         <p>The Alliance for Gray Market and Counterfeit Abatement. A non-profit organisation serving members worldwide.</p>
+        <address style="font-style:normal;margin-top:1.2rem;font-size:.92rem;line-height:1.75;color:var(--mute)">
+          611 Pennsylvania Avenue SE, Suite 1050<br>
+          Washington, DC 20003<br>
+          <a href="mailto:info@agmaglobal.org" style="text-decoration:none;color:var(--accent)">info@agmaglobal.org</a><br>
+          <a href="tel:+12525000123" style="text-decoration:none;color:var(--mute)">(252) 500-0123</a>
+        </address>
         <div class="social">
-          <a href="#top" aria-label="LinkedIn"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M6.94 5.5a2 2 0 1 1-4 0 2 2 0 0 1 4 0ZM3.2 20.5h3.5V9H3.2v11.5Zm6.1 0h3.5v-6.2c0-1.7.9-2.5 2.1-2.5 1.1 0 1.8.8 1.8 2.4v6.3h3.5v-6.8c0-3.2-1.7-4.7-4-4.7-1.8 0-2.7 1-3.2 1.8h-.1V9H9.3c.05 1 0 11.5 0 11.5Z"/></svg></a>
-          <a href="#top" aria-label="X"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M17.5 3h3.2l-7 8 8.2 10h-6.4l-5-6.1-5.8 6.1H1.5l7.5-8.6L1.2 3h6.6l4.5 5.6L17.5 3Zm-1.1 16.1h1.8L7.7 4.8H5.8l10.6 14.3Z"/></svg></a>
-          <a href="#top" aria-label="Email"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" aria-hidden="true"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="m3.5 6.5 8.5 6 8.5-6" stroke-linecap="round"/></svg></a>
+          <a href="https://www.linkedin.com/company/agma---alliance-for-gray-marketing-and-counterfeit-abatement/" target="_blank" rel="noopener" aria-label="AGMA on LinkedIn"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M6.94 5.5a2 2 0 1 1-4 0 2 2 0 0 1 4 0ZM3.2 20.5h3.5V9H3.2v11.5Zm6.1 0h3.5v-6.2c0-1.7.9-2.5 2.1-2.5 1.1 0 1.8.8 1.8 2.4v6.3h3.5v-6.8c0-3.2-1.7-4.7-4-4.7-1.8 0-2.7 1-3.2 1.8h-.1V9H9.3c.05 1 0 11.5 0 11.5Z"/></svg></a>
+          <a href="https://twitter.com/AGMAGlobal" target="_blank" rel="noopener" aria-label="AGMA on X"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M17.5 3h3.2l-7 8 8.2 10h-6.4l-5-6.1-5.8 6.1H1.5l7.5-8.6L1.2 3h6.6l4.5 5.6L17.5 3Zm-1.1 16.1h1.8L7.7 4.8H5.8l10.6 14.3Z"/></svg></a>
+          <a href="mailto:info@agmaglobal.org" aria-label="Email AGMA"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" aria-hidden="true"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="m3.5 6.5 8.5 6 8.5-6" stroke-linecap="round"/></svg></a>
         </div>
       </div>
       <div>
         <h4>Alliance</h4>
         <ul>
+          <li><a href="#work">Mission</a></li>
           <li><a href="#work">Who we are</a></li>
-          <li><a href="#work">What we do</a></li>
+          <li><a href="#work">About</a></li>
+          <li><a href="#threats">4 Pillars</a></li>
           <li><a href="#work">Leadership</a></li>
-          <li><a href="#threats">IP protection</a></li>
         </ul>
       </div>
       <div>
         <h4>Members</h4>
         <ul>
+          <li><a href="#membership">Member types</a></li>
+          <li><a href="#membership">Membership offerings</a></li>
           <li><a href="#membership">Member benefits</a></li>
-          <li><a href="#membership">Member spotlight</a></li>
+          <li><a href="#membership">Our members</a></li>
           <li><a href="#apply">Apply to join</a></li>
-          <li><a href="#work">Working groups</a></li>
         </ul>
       </div>
       <div>
         <h4>Resources</h4>
         <ul>
           <li><a href="#research">White papers</a></li>
-          <li><a href="#research">Benchmark studies</a></li>
-          <li><a href="#border">Enforcement</a></li>
-          <li><a href="#research">Newsroom</a></li>
+          <li><a href="#research">Articles</a></li>
+          <li><a href="#border">One Device</a></li>
+          <li><a href="#research">Infographics</a></li>
+          <li><a href="#research">Glossary</a></li>
         </ul>
       </div>
     </div>
     <div class="ft__base">
-      <p>&copy; 2026 Alliance for Gray Market and Counterfeit Abatement</p>
-      <p>Concept design demo. Not an official AGMA property. Inspection records shown are illustrative. Trade figures: OECD and EUIPO, Mapping Global Trade in Fakes 2025.</p>
+      <p>&copy; 2026 Alliance for Gray Market and Counterfeit Abatement &middot; Washington, D.C.</p>
+      <p>Concept design demo. Not an official AGMA property. Inspection records shown are illustrative. Statistics as published by AGMA Global.</p>
     </div>
   </div>
 </footer>
