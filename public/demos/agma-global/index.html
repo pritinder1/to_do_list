@@ -101,7 +101,7 @@ p{margin:0}
 .mark{display:flex; align-items:center; gap:.7rem; text-decoration:none; flex:0 0 auto}
 .mark__glyph{width:26px; height:26px; flex:0 0 auto}
 /* Official logo slot: an <img class="mark__logo"> replaces the inline mark below. */
-.mark__logo{height:44px; width:auto; display:block; flex:0 0 auto}
+.mark__logo{height:44px; width:auto; display:block; flex:0 0 auto; object-fit:contain}
 .mark__fallback{display:flex; align-items:center; gap:.7rem}
 .mark__fallback[hidden]{display:none}
 .ft .mark__logo{height:52px}
@@ -389,7 +389,12 @@ p{margin:0}
 .credit__in{display:flex; flex-wrap:wrap; align-items:center; gap:1.4rem 2.5rem; padding-block:2.1rem}
 .credit__id{display:flex; flex-direction:column; gap:.45rem}
 .credit__lab{font-family:var(--mono); font-size:.63rem; letter-spacing:.24em; text-transform:uppercase; color:rgba(255,255,255,.7)}
-.credit__logo{height:44px; width:auto; display:block; margin:.15rem 0}
+.credit__logo{
+  height:44px; width:auto; display:block; margin:.15rem 0;
+  align-self:flex-start;      /* column flex: stop cross-axis stretch distorting it */
+  flex-shrink:0;              /* and stop main-axis shrink squashing its height */
+  max-width:100%; object-fit:contain;
+}
 .credit__tag{font-size:.92rem; color:rgba(255,255,255,.82)}
 .credit__link{
   margin-left:auto; display:inline-flex; align-items:center; gap:.55rem; min-height:3rem; padding:.85rem 1.6rem;
