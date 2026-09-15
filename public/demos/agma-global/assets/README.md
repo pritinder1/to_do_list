@@ -35,3 +35,14 @@ Swap the file here, re-encode it as a data URI, and replace the matching
 `src="data:image/png;base64,..."` in `index.html`. The header uses
 `.mark__logo`, the footer the same class at a larger size, and the agency credit
 uses `.credit__logo`.
+
+## Generated assets
+
+| File | How it was made |
+|---|---|
+| `favicon-32/64/180.png` | The globe dome lifted out of AGMA's own lockup, strokes dilated so they survive downscaling, centred on brand navy `#0B1D30`. The unmodified logo's hairlines turn to mush below about 48px. The 64px version is inlined in the page as a data URI; the 180px is the Apple touch icon. |
+| `og-image.png` | 1200x630 share card: the real logo on the page's `#091420` ground with the hero line and a brand-blue rule. Rendered from HTML through headless Chromium, then palette-reduced. |
+
+`og:image` and `twitter:image` currently point at the relative path
+`assets/og-image.png`. Most scrapers require an absolute URL, so change these to
+the full `https://.../assets/og-image.png` once the page has a real hostname.

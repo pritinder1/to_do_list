@@ -72,7 +72,55 @@ with zero external requests: AGMA's white lockup in the header and footer, and
 NAV & Associates' white knockout on the credit band. Sources and the reasoning
 behind each variant choice are in `assets/README.md`.
 
-## Content provenance## Content provenance## Content provenance
+## Newsroom and events
+
+The newsroom lists AGMA's four most recent published items and their next
+scheduled event, each linking to the real page on agmaglobal.org. Resource
+cards, footer resource links and the One Device call to action resolve to their
+live pages too, so nothing in the demo is a dead anchor.
+
+## Accessibility
+
+Audited in a real browser, currently clean on: every image has alt text, one
+`h1`, no heading levels skipped, no link or button without an accessible name,
+every form control labelled, every `target="_blank"` carrying `rel="noopener"`.
+A skip link is the first tab stop. The inspection terminal is a labelled region.
+Body and muted text clear 4.5:1 against their grounds, and motion is disabled
+under `prefers-reduced-motion`.
+
+## Content provenance## Newsroom and events
+
+The newsroom lists AGMA's four most recent published items and their next
+scheduled event, each linking to the real page on agmaglobal.org. Resource
+cards, footer resource links and the One Device call to action resolve to their
+live pages too, so nothing in the demo is a dead anchor.
+
+## Accessibility
+
+Audited in a real browser, currently clean on: every image has alt text, one
+`h1`, no heading levels skipped, no link or button without an accessible name,
+every form control labelled, every `target="_blank"` carrying `rel="noopener"`.
+A skip link is the first tab stop. The inspection terminal is a labelled region.
+Body and muted text clear 4.5:1 against their grounds, and motion is disabled
+under `prefers-reduced-motion`.
+
+## Content provenance## Newsroom and events
+
+The newsroom lists AGMA's four most recent published items and their next
+scheduled event, each linking to the real page on agmaglobal.org. Resource
+cards, footer resource links and the One Device call to action resolve to their
+live pages too, so nothing in the demo is a dead anchor.
+
+## Accessibility
+
+Audited in a real browser, currently clean on: every image has alt text, one
+`h1`, no heading levels skipped, no link or button without an accessible name,
+every form control labelled, every `target="_blank"` carrying `rel="noopener"`.
+A skip link is the first tab stop. The inspection terminal is a labelled region.
+Body and muted text clear 4.5:1 against their grounds, and motion is disabled
+under `prefers-reduced-motion`.
+
+## Content provenance
 
 All organizational facts are drawn from public sources: founding year and
 founding members, the four threat domains, the CBP Donations Acceptance Program
