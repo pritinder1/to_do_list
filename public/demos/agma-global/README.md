@@ -67,29 +67,12 @@ type: their logo file could not be downloaded (see below), so drop
 
 ## Brand assets
 
-The header and footer use AGMA's real logo, referenced at its live URL:
+Both real logos are embedded as base64 data URIs, so the page renders correctly
+with zero external requests: AGMA's white lockup in the header and footer, and
+NAV & Associates' white knockout on the credit band. Sources and the reasoning
+behind each variant choice are in `assets/README.md`.
 
-```
-https://cdn.ymaws.com/agmaglobal.site-ym.com/resource/resmgr/do_not_delete/logo_white.png
-```
-
-This is the white version their own site serves in its footer, so it is the
-correct variant for this page's dark ground. It loads normally when the page is
-served from any ordinary host.
-
-If the image cannot load, a small script swaps in the `.mark__fallback`
-wordmark, so the header never renders empty. That fallback is what appears
-inside the claude.ai artifact preview, whose content security policy blocks all
-third-party images by design. To make the logo appear there too, save the file
-into `assets/` and point `.mark__logo` at it, or inline it as a data URI.
-
-The NAV & Associates credit is set in type rather than their logo. Their media
-library holds several candidate files (`logo-light4.png`, `logo-light-3.png`,
-`brand-logo.png`) but the light/dark naming is ambiguous and the files could not
-be viewed from this session, so a wrong pick risked an invisible logo on the red
-band.
-
-## Content provenance## Content provenance
+## Content provenance## Content provenance## Content provenance
 
 All organizational facts are drawn from public sources: founding year and
 founding members, the four threat domains, the CBP Donations Acceptance Program

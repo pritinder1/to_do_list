@@ -1,28 +1,37 @@
 # Brand assets
 
-Drop AGMA's official assets here, then update the two `ASSET SLOT` blocks in
-`../index.html` (header and footer).
+Both logos are the real thing, and both are also embedded directly in
+`../index.html` as base64 data URIs, so the page renders correctly with no
+external requests. The files here are the sources.
 
-Expected:
+| File | Origin | Notes |
+|---|---|---|
+| `agma-logo-white.png` | `cdn.ymaws.com/agmaglobal.site-ym.com/resource/resmgr/do_not_delete/logo_white.png` | The white lockup AGMA serves in their own footer. Resized to 404x110, PNG8, 4.3KB. |
+| `nav-associates-logo-white.png` | `navandassoc.com/wp-content/uploads/2025/12/brand-logo.png` | NAV's white knockout logo. Resized to 699x120, PNG8, 3.6KB. |
 
-- `agma-logo.svg` — primary logo, light version, for the dark header/footer.
-  SVG preferred. If only a raster exists, supply @2x PNG on a transparent
-  background.
-- `agma-logo-dark.svg` — optional dark version, if any band inverts later.
-- `favicon.ico` / `icon-512.png` — optional.
+## Picking the right variants
 
-The swap is one line per slot:
+AGMA serves two: `logo.png` (dark, for their white header) and
+`logo_white.png` (for their navy footer). This page is dark, so it uses the
+white one.
 
-```html
-<img class="mark__logo" src="assets/agma-logo.svg" alt="AGMA">
-```
+NAV's library holds several files whose light/dark naming is ambiguous. Sampling
+the artwork colour over a black background (rather than the default white, which
+makes every transparent PNG look white) showed:
 
-`.mark__logo` is already defined in the stylesheet (30px tall in the header,
-28px in the footer, width auto).
+| File | Artwork colour |
+|---|---|
+| `brand-logo.png` | near-white `#F0F0F0` |
+| `logo-mb.png` | brand red `#63040C` |
+| `logo-dark-2.png` | near-black |
 
-## Current state
+So `brand-logo.png` is the white knockout, which is what the red credit band
+needs. Both logos are white-on-transparent, so PNG8 with a two-entry palette is
+lossless in practice and keeps them under 5KB each.
 
-The page ships with a placeholder geometric mark that is NOT AGMA's official
-logo. This session's network policy blocked `agmaglobal.org` and their CDN
-`cdn.ymaws.com` (HTTP 403 at the egress proxy), so the real assets could not be
-retrieved. Replace the placeholder before this is shown as brand work.
+## Replacing them
+
+Swap the file here, re-encode it as a data URI, and replace the matching
+`src="data:image/png;base64,..."` in `index.html`. The header uses
+`.mark__logo`, the footer the same class at a larger size, and the agency credit
+uses `.credit__logo`.
