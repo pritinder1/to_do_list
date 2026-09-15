@@ -72,6 +72,13 @@ with zero external requests: AGMA's white lockup in the header and footer, and
 NAV & Associates' white knockout on the credit band. Sources and the reasoning
 behind each variant choice are in `assets/README.md`.
 
+## Member logo wall
+
+The 14 real member logos from AGMA's own rotator, on a white band below the
+hero, delivered as one CSS sprite embedded as a data URI. Greyscale at rest,
+full colour on hover. See `assets/README.md` for the cell map and the filter
+gotcha.
+
 ## Newsroom and events
 
 The newsroom lists AGMA's four most recent published items and their next
@@ -88,7 +95,14 @@ A skip link is the first tab stop. The inspection terminal is a labelled region.
 Body and muted text clear 4.5:1 against their grounds, and motion is disabled
 under `prefers-reduced-motion`.
 
-## Content provenance## Newsroom and events
+## Content provenance## Member logo wall
+
+The 14 real member logos from AGMA's own rotator, on a white band below the
+hero, delivered as one CSS sprite embedded as a data URI. Greyscale at rest,
+full colour on hover. See `assets/README.md` for the cell map and the filter
+gotcha.
+
+## Newsroom and events
 
 The newsroom lists AGMA's four most recent published items and their next
 scheduled event, each linking to the real page on agmaglobal.org. Resource
@@ -104,7 +118,14 @@ A skip link is the first tab stop. The inspection terminal is a labelled region.
 Body and muted text clear 4.5:1 against their grounds, and motion is disabled
 under `prefers-reduced-motion`.
 
-## Content provenance## Newsroom and events
+## Content provenance## Member logo wall
+
+The 14 real member logos from AGMA's own rotator, on a white band below the
+hero, delivered as one CSS sprite embedded as a data URI. Greyscale at rest,
+full colour on hover. See `assets/README.md` for the cell map and the filter
+gotcha.
+
+## Newsroom and events
 
 The newsroom lists AGMA's four most recent published items and their next
 scheduled event, each linking to the real page on agmaglobal.org. Resource

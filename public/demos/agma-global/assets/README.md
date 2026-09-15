@@ -46,3 +46,41 @@ uses `.credit__logo`.
 `og:image` and `twitter:image` currently point at the relative path
 `assets/og-image.png`. Most scrapers require an absolute URL, so change these to
 the full `https://.../assets/og-image.png` once the page has a real hostname.
+
+## Member logo wall
+
+`member-logos-sprite.png` is a single 2800x64 sprite holding all 14 member logos
+in uniform 200x64 cells, taken from AGMA's own member rotator. It is embedded in
+the page as a data URI and positioned with CSS, so the whole wall costs one
+image and zero extra requests.
+
+Cell order (left to right, `--i` 0 through 13):
+
+| # | Member | # | Member |
+|---|---|---|---|
+| 0 | Siemens | 7 | HP |
+| 1 | Amazon | 8 | Brand Alignment |
+| 2 | HPE | 9 | IBM |
+| 3 | MSU A-CAPP Center | 10 | Sideman & Bancroft |
+| 4 | TD SYNNEX | 11 | Cisco |
+| 5 | Rockwell Automation | 12 | Microsoft |
+| 6 | Schneider Electric | 13 | Marvell |
+
+Each tile is a `<li class="mlogo" style="--i:N" role="img" aria-label="...">`, so
+the member name reaches assistive tech even though the logo is a background
+image.
+
+Logos render greyscale at 58% and come to full colour on hover. Note the filter
+is `grayscale(1) opacity(.58)` with **no** `contrast()`: any contrast below 1
+lifts the cell's white off pure white and draws a visible grey box behind every
+logo.
+
+To change the roster, rebuild the sprite with the same 200x64 cell size and keep
+the `--i` indices in sync with the new order.
+
+### Source files
+
+The rotator images live at
+`cdn.ymaws.com/agmaglobal.site-ym.com/resource/dynamic/rotator/`. The
+`agmaglobal.org` path for the same files returns 403 to non-browser clients; the
+CDN host serves them.
