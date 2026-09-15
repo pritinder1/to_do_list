@@ -78,8 +78,10 @@ p{margin:0}
 .mark{display:flex; align-items:center; gap:.7rem; text-decoration:none; flex:0 0 auto}
 .mark__glyph{width:26px; height:26px; flex:0 0 auto}
 /* Official logo slot: an <img class="mark__logo"> replaces the inline mark below. */
-.mark__logo{height:30px; width:auto; display:block; flex:0 0 auto}
-.ft .mark__logo{height:28px}
+.mark__logo{height:34px; width:auto; display:block; flex:0 0 auto}
+.mark__fallback{display:flex; align-items:center; gap:.7rem}
+.mark__fallback[hidden]{display:none}
+.ft .mark__logo{height:40px}
 .mark__txt{font-family:var(--display); font-weight:800; font-size:1.18rem; letter-spacing:.02em; font-stretch:112%}
 .mark__txt span{color:var(--accent)}
 .nav{display:flex; gap:1.9rem; margin-left:auto}
@@ -392,14 +394,14 @@ p{margin:0}
 <header class="hdr">
   <div class="wrap hdr__in">
     <a class="mark" href="#top">
-      <!-- ASSET SLOT: placeholder mark, not AGMA's official logo.
-           Replace the <svg> and <span> below with:
-           <img class="mark__logo" src="assets/agma-logo.svg" alt="AGMA"> -->
-      <svg class="mark__glyph" viewBox="0 0 24 24" fill="none" aria-hidden="true">
-        <path d="M12 2 3 6v6.2c0 5.2 3.6 8.9 9 9.8 5.4-.9 9-4.6 9-9.8V6l-9-4Z" stroke="#35A2E2" stroke-width="1.6" stroke-linejoin="round"/>
-        <path d="m8.4 12.1 2.5 2.5 4.7-5" stroke="#E7EAF0" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/>
-      </svg>
-      <span class="mark__txt">AGMA<span>.</span></span>
+      <img class="mark__logo" src="https://cdn.ymaws.com/agmaglobal.site-ym.com/resource/resmgr/do_not_delete/logo_white.png" alt="AGMA Global">
+      <span class="mark__fallback" hidden>
+        <svg class="mark__glyph" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+          <path d="M12 2 3 6v6.2c0 5.2 3.6 8.9 9 9.8 5.4-.9 9-4.6 9-9.8V6l-9-4Z" stroke="#35A2E2" stroke-width="1.6" stroke-linejoin="round"/>
+          <path d="m8.4 12.1 2.5 2.5 4.7-5" stroke="#E6ECF2" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/>
+        </svg>
+        <span class="mark__txt">AGMA<span>.</span></span>
+      </span>
     </a>
     <nav class="nav" aria-label="Primary">
       <a href="#threats">4 Pillars</a>
@@ -881,14 +883,14 @@ p{margin:0}
     <div class="ft__grid">
       <div>
         <a class="mark" href="#top">
-          <!-- ASSET SLOT: placeholder mark, not AGMA's official logo.
-           Replace the <svg> and <span> below with:
-           <img class="mark__logo" src="assets/agma-logo.svg" alt="AGMA"> -->
-      <svg class="mark__glyph" viewBox="0 0 24 24" fill="none" aria-hidden="true">
-            <path d="M12 2 3 6v6.2c0 5.2 3.6 8.9 9 9.8 5.4-.9 9-4.6 9-9.8V6l-9-4Z" stroke="#35A2E2" stroke-width="1.6" stroke-linejoin="round"/>
-            <path d="m8.4 12.1 2.5 2.5 4.7-5" stroke="#E7EAF0" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/>
-          </svg>
-          <span class="mark__txt">AGMA<span>.</span></span>
+          <img class="mark__logo" src="https://cdn.ymaws.com/agmaglobal.site-ym.com/resource/resmgr/do_not_delete/logo_white.png" alt="AGMA Global">
+      <span class="mark__fallback" hidden>
+        <svg class="mark__glyph" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+          <path d="M12 2 3 6v6.2c0 5.2 3.6 8.9 9 9.8 5.4-.9 9-4.6 9-9.8V6l-9-4Z" stroke="#35A2E2" stroke-width="1.6" stroke-linejoin="round"/>
+          <path d="m8.4 12.1 2.5 2.5 4.7-5" stroke="#E6ECF2" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/>
+        </svg>
+        <span class="mark__txt">AGMA<span>.</span></span>
+      </span>
         </a>
         <p>The Alliance for Gray Market and Counterfeit Abatement. A non-profit organisation serving members worldwide.</p>
         <address style="font-style:normal;margin-top:1.2rem;font-size:.92rem;line-height:1.75;color:var(--mute)">
@@ -945,6 +947,17 @@ p{margin:0}
 (function () {
   "use strict";
   var reduce = window.matchMedia && window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+
+  /* ---- fall back to the wordmark if the remote logo is unavailable ---- */
+  Array.prototype.forEach.call(document.querySelectorAll(".mark__logo"), function (img) {
+    function swap() {
+      img.hidden = true;
+      var fb = img.parentNode.querySelector(".mark__fallback");
+      if (fb) fb.hidden = false;
+    }
+    img.addEventListener("error", swap);
+    if (img.complete && img.naturalWidth === 0) swap();
+  });
 
   /* ---- mobile menu ---- */
   var burger = document.getElementById("burger");

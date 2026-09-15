@@ -67,15 +67,29 @@ type: their logo file could not be downloaded (see below), so drop
 
 ## Brand assets
 
-The page ships with a **placeholder** geometric mark. It is not AGMA's official
-logo. `agmaglobal.org` and their CDN `cdn.ymaws.com` were both blocked (HTTP
-403) by this environment's egress proxy, so the real assets could not be
-retrieved.
+The header and footer use AGMA's real logo, referenced at its live URL:
 
-Two `ASSET SLOT` comments in `index.html` mark where the real logo goes, and
-`.mark__logo` is already styled for it. See `assets/README.md`.
+```
+https://cdn.ymaws.com/agmaglobal.site-ym.com/resource/resmgr/do_not_delete/logo_white.png
+```
 
-## Content provenance
+This is the white version their own site serves in its footer, so it is the
+correct variant for this page's dark ground. It loads normally when the page is
+served from any ordinary host.
+
+If the image cannot load, a small script swaps in the `.mark__fallback`
+wordmark, so the header never renders empty. That fallback is what appears
+inside the claude.ai artifact preview, whose content security policy blocks all
+third-party images by design. To make the logo appear there too, save the file
+into `assets/` and point `.mark__logo` at it, or inline it as a data URI.
+
+The NAV & Associates credit is set in type rather than their logo. Their media
+library holds several candidate files (`logo-light4.png`, `logo-light-3.png`,
+`brand-logo.png`) but the light/dark naming is ambiguous and the files could not
+be viewed from this session, so a wrong pick risked an invisible logo on the red
+band.
+
+## Content provenance## Content provenance
 
 All organizational facts are drawn from public sources: founding year and
 founding members, the four threat domains, the CBP Donations Acceptance Program
