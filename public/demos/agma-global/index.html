@@ -77,6 +77,9 @@ p{margin:0}
 .hdr__in{display:flex; align-items:center; gap:2rem; height:4.5rem}
 .mark{display:flex; align-items:center; gap:.7rem; text-decoration:none; flex:0 0 auto}
 .mark__glyph{width:26px; height:26px; flex:0 0 auto}
+/* Official logo slot: an <img class="mark__logo"> replaces the inline mark below. */
+.mark__logo{height:30px; width:auto; display:block; flex:0 0 auto}
+.ft .mark__logo{height:28px}
 .mark__txt{font-family:var(--display); font-weight:800; font-size:1.18rem; letter-spacing:.02em; font-stretch:112%}
 .mark__txt span{color:var(--accent)}
 .nav{display:flex; gap:1.9rem; margin-left:auto}
@@ -301,8 +304,8 @@ p{margin:0}
   .hero__grid,.feature{grid-template-columns:1fr}
   .papers,.tiers{grid-template-columns:1fr}
   .stats{grid-template-columns:repeat(2,1fr)}
-  .step{grid-template-columns:3.5rem minmax(0,1fr); }
-  .step p{grid-column:2}
+  .step{grid-template-columns:1fr; gap:.7rem; padding-block:2.2rem}
+  .step__n{padding-top:0}
   .ft__grid{grid-template-columns:1fr 1fr}
   .tier--lead{transform:none}
 }
@@ -324,6 +327,9 @@ p{margin:0}
 <header class="hdr">
   <div class="wrap hdr__in">
     <a class="mark" href="#top">
+      <!-- ASSET SLOT — placeholder mark, not AGMA's official logo.
+           Replace the <svg> and <span> below with:
+           <img class="mark__logo" src="assets/agma-logo.svg" alt="AGMA"> -->
       <svg class="mark__glyph" viewBox="0 0 24 24" fill="none" aria-hidden="true">
         <path d="M12 2 3 6v6.2c0 5.2 3.6 8.9 9 9.8 5.4-.9 9-4.6 9-9.8V6l-9-4Z" stroke="#2FD4C0" stroke-width="1.6" stroke-linejoin="round"/>
         <path d="m8.4 12.1 2.5 2.5 4.7-5" stroke="#E7EAF0" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/>
@@ -670,7 +676,10 @@ p{margin:0}
     <div class="ft__grid">
       <div>
         <a class="mark" href="#top">
-          <svg class="mark__glyph" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+          <!-- ASSET SLOT — placeholder mark, not AGMA's official logo.
+           Replace the <svg> and <span> below with:
+           <img class="mark__logo" src="assets/agma-logo.svg" alt="AGMA"> -->
+      <svg class="mark__glyph" viewBox="0 0 24 24" fill="none" aria-hidden="true">
             <path d="M12 2 3 6v6.2c0 5.2 3.6 8.9 9 9.8 5.4-.9 9-4.6 9-9.8V6l-9-4Z" stroke="#2FD4C0" stroke-width="1.6" stroke-linejoin="round"/>
             <path d="m8.4 12.1 2.5 2.5 4.7-5" stroke="#E7EAF0" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/>
           </svg>

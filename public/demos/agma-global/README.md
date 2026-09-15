@@ -37,6 +37,16 @@ distinct chapters rather than dead space.
 - No horizontal overflow at 375px (verified).
 - `prefers-reduced-motion` stops the scanline and record cycling.
 
+## Brand assets
+
+The page ships with a **placeholder** geometric mark. It is not AGMA's official
+logo. `agmaglobal.org` and their CDN `cdn.ymaws.com` were both blocked (HTTP
+403) by this environment's egress proxy, so the real assets could not be
+retrieved.
+
+Two `ASSET SLOT` comments in `index.html` mark where the real logo goes, and
+`.mark__logo` is already styled for it. See `assets/README.md`.
+
 ## Content provenance
 
 All organizational facts are drawn from public sources: founding year and
