@@ -37,6 +37,34 @@ distinct chapters rather than dead space.
 - No horizontal overflow at 375px (verified).
 - `prefers-reduced-motion` stops the scanline and record cycling.
 
+## Membership application form
+
+A demo form at `#apply`. It validates client side (required fields, email
+shape, at least one threat selected), shows inline errors that say how to fix
+them, and swaps to a confirmation with a generated reference number.
+
+Nothing is transmitted or stored. No backend, no network call, no persistence,
+and the page says so in two places. To make it real, post the form payload to
+whichever system owns membership intake.
+
+## Agency credit
+
+A `.credit` band above the footer credits NAV & Associates, using their own
+brand colours taken from their site's stylesheet (read through the WordPress
+connector, since the site itself is not reachable from this session):
+
+| Token | Value |
+|---|---|
+| Primary red | `#9E010C` |
+| Deep red | `#63040B` |
+| Solid red accent | `#8B020C` |
+| Ink | `#19272B` |
+| Pale tint | `#FFC4C8` |
+
+The band reuses their signature radial red gradient. The wordmark is set in
+type: their logo file could not be downloaded (see below), so drop
+`assets/nav-associates-logo.png` in and swap `.credit__name` when available.
+
 ## Brand assets
 
 The page ships with a **placeholder** geometric mark. It is not AGMA's official
